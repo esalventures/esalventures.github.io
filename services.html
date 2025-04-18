@@ -1,0 +1,1079 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Our Services | EsalVentures Business Consulting</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Flowbite CSS CDN -->
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.3.0/flowbite.min.css"
+      rel="stylesheet"
+    />
+    <!-- Google Fonts - Inter -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      body {
+        font-family: "Inter", sans-serif;
+      }
+      .service-hero {
+        background-image: linear-gradient(
+            rgba(11, 44, 77, 0.9),
+            rgba(11, 44, 77, 0.9)
+          ),
+          url("https://images.unsplash.com/photo-1450101499163-c8848c66ca85?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80");
+        background-size: cover;
+        background-position: center;
+        min-height: 50vh;
+        display: flex;
+        align-items: center;
+      }
+      .nav-container {
+        background: rgba(255, 255, 255, 0.95);
+        backdrop-filter: blur(10px);
+        box-shadow: 0 2px 20px rgba(0, 0, 0, 0.08);
+      }
+      .nav-link {
+        position: relative;
+        color: #0b2c4d;
+        font-weight: 500;
+        transition: all 0.3s ease;
+      }
+      .nav-link:hover {
+        color: #3b82f6;
+      }
+      .nav-link::after {
+        content: "";
+        position: absolute;
+        width: 0;
+        height: 2px;
+        bottom: 0;
+        left: 0;
+        background-color: #3b82f6;
+        transition: width 0.3s ease;
+      }
+      .nav-link:hover::after {
+        width: 100%;
+      }
+      .service-card {
+        transition: all 0.3s ease;
+      }
+      .service-card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1);
+      }
+      .btn-hover-effect {
+        transition: all 0.3s ease;
+        transform: translateY(0);
+      }
+      .btn-hover-effect:hover {
+        transform: translateY(-3px);
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+      }
+      .logo-icon {
+        display: flex;
+        align-items: flex-end;
+        height: 30px;
+      }
+      .logo-bar {
+        width: 4px;
+        background-color: #0b2c4d;
+        margin-right: 3px;
+        border-radius: 2px;
+      }
+      .logo-bar:nth-child(1) {
+        height: 20px;
+      }
+      .logo-bar:nth-child(2) {
+        height: 30px;
+      }
+      .logo-bar:nth-child(3) {
+        height: 25px;
+      }
+      .service-icon {
+        width: 60px;
+        height: 60px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 12px;
+        margin-bottom: 20px;
+      }
+      .feature-badge {
+        position: absolute;
+        top: -12px;
+        right: 20px;
+        background-color: #3b82f6;
+        color: white;
+        padding: 4px 12px;
+        border-radius: 20px;
+        font-size: 12px;
+        font-weight: 600;
+      }
+      .benefit-item {
+        position: relative;
+        padding-left: 28px;
+      }
+      .benefit-item:before {
+        content: "";
+        position: absolute;
+        left: 0;
+        top: 8px;
+        width: 16px;
+        height: 16px;
+        background-color: #3b82f6;
+        border-radius: 50%;
+      }
+      .tab-content {
+        display: none;
+      }
+      .tab-content.active {
+        display: block;
+        animation: fadeIn 0.5s ease;
+      }
+      @keyframes fadeIn {
+        from {
+          opacity: 0;
+        }
+        to {
+          opacity: 1;
+        }
+      }
+    </style>
+  </head>
+  <body class="bg-white">
+    <!-- Navigation Bar -->
+    <nav
+      class="nav-container fixed w-full z-20 top-0 left-0 border-b border-gray-100"
+    >
+      <div class="max-w-7xl mx-auto px-6">
+        <div class="flex justify-between h-20 items-center">
+          <!-- Logo -->
+          <div class="flex items-center">
+            <div class="flex-shrink-0 flex items-center">
+              <div class="logo-icon mr-2">
+                <div class="logo-bar"></div>
+                <div class="logo-bar"></div>
+                <div class="logo-bar"></div>
+              </div>
+              <span class="text-xl font-bold text-[#0B2C4D]">EsalVentures</span>
+            </div>
+          </div>
+
+          <!-- Desktop Navigation -->
+          <div class="hidden md:flex md:items-center md:space-x-8">
+            <div class="flex space-x-8">
+              <a href="index.html" class="nav-link px-3 py-2 text-sm">Home</a>
+              <a
+                href="services.html"
+                class="nav-link px-3 py-2 text-sm font-semibold text-blue-600"
+                >Services</a
+              >
+              <a href="blog.html" class="nav-link px-3 py-2 text-sm">Blog</a>
+              <a href="portfolio.html" class="nav-link px-3 py-2 text-sm"
+                >Portfolio</a
+              >
+
+              <!-- About Dropdown -->
+              <div class="relative group">
+                <button class="nav-link px-3 py-2 text-sm flex items-center">
+                  About
+                  <svg
+                    class="w-4 h-4 ml-1"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                      d="M19 9l-7 7-7-7"
+                    ></path>
+                  </svg>
+                </button>
+                <div
+                  class="absolute hidden group-hover:block bg-white shadow-lg rounded-md mt-2 py-1 w-48 z-10 border border-gray-100"
+                >
+                  <a
+                    href="about.html"
+                    class="block px-4 py-2 text-sm text-gray-700 hover:bg-blue-50 hover:text-blue-600"
+                    >Our Story</a
+                  >
+                  <a
+                    href="team.html"
+                    class="block px-4 py-2 text-sm text-gray-700 hover:bg-blue-50 hover:text-blue-600"
+                    >Team</a
+                  >
+                  <a
+                    href="careers.html"
+                    class="block px-4 py-2 text-sm text-gray-700 hover:bg-blue-50 hover:text-blue-600"
+                    >Careers</a
+                  >
+                  <a
+                    href="resources.html"
+                    class="block px-4 py-2 text-sm text-gray-700 hover:bg-blue-50 hover:text-blue-600"
+                    >Resources</a
+                  >
+                </div>
+              </div>
+            </div>
+
+            <a
+              href="contact.html"
+              class="ml-8 inline-flex items-center px-4 py-2 border border-transparent text-sm font-medium rounded-md shadow-sm text-white bg-[#0B2C4D] hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500 btn-hover-effect"
+            >
+              Get a Consultation
+            </a>
+          </div>
+
+          <!-- Mobile menu button -->
+          <div class="md:hidden flex items-center">
+            <button
+              type="button"
+              class="inline-flex items-center justify-center p-2 rounded-md text-gray-500 hover:text-gray-600 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-blue-500"
+              aria-controls="mobile-menu"
+              aria-expanded="false"
+            >
+              <span class="sr-only">Open main menu</span>
+              <svg
+                class="block h-6 w-6"
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+                aria-hidden="true"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M4 6h16M4 12h16M4 18h16"
+                />
+              </svg>
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Mobile menu -->
+      <div class="md:hidden hidden" id="mobile-menu">
+        <div
+          class="px-2 pt-2 pb-3 space-y-1 sm:px-3 bg-white border-t border-gray-100"
+        >
+          <a
+            href="index.html"
+            class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-blue-500 hover:bg-gray-50"
+            >Home</a
+          >
+          <a
+            href="services.html"
+            class="block px-3 py-2 rounded-md text-base font-medium text-blue-600 bg-blue-50"
+            >Services</a
+          >
+          <a
+            href="blog.html"
+            class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-blue-500 hover:bg-gray-50"
+            >Blog</a
+          >
+          <a
+            href="portfolio.html"
+            class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-blue-500 hover:bg-gray-50"
+            >Portfolio</a
+          >
+          <a
+            href="about.html"
+            class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-blue-500 hover:bg-gray-50"
+            >Our Story</a
+          >
+          <a
+            href="team.html"
+            class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-blue-500 hover:bg-gray-50"
+            >Team</a
+          >
+          <a
+            href="careers.html"
+            class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-blue-500 hover:bg-gray-50"
+            >Careers</a
+          >
+          <a
+            href="resources.html"
+            class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-blue-500 hover:bg-gray-50"
+            >Resources</a
+          >
+          <a
+            href="contact.html"
+            class="block px-3 py-2 rounded-md text-base font-medium text-white bg-[#0B2C4D] hover:bg-blue-700"
+            >Get a Consultation</a
+          >
+        </div>
+      </div>
+    </nav>
+
+    <!-- Service Hero Section -->
+    <section class="service-hero text-white">
+      <div class="max-w-6xl mx-auto px-6 py-24">
+        <div class="max-w-2xl">
+          <h1 class="text-4xl md:text-5xl font-bold mb-6">
+            Our Comprehensive Business Solutions
+          </h1>
+          <p class="text-xl text-blue-100 mb-8">
+            Tailored consulting services designed to address your unique
+            challenges and drive sustainable growth across all aspects of your
+            organization.
+          </p>
+          <a
+            href="#services"
+            class="inline-flex items-center px-6 py-3 border border-transparent text-base font-medium rounded-md shadow-sm text-[#0B2C4D] bg-white hover:bg-gray-100 btn-hover-effect"
+          >
+            Explore Our Services
+            <svg
+              class="ml-2 -mr-1 w-5 h-5"
+              fill="currentColor"
+              viewBox="0 0 20 20"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                fill-rule="evenodd"
+                d="M10.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L12.586 11H5a1 1 0 110-2h7.586l-2.293-2.293a1 1 0 010-1.414z"
+                clip-rule="evenodd"
+              ></path>
+            </svg>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Services Overview -->
+    <section id="services" class="py-16 px-4 bg-gray-50">
+      <div class="max-w-6xl mx-auto">
+        <div class="text-center mb-12">
+          <span
+            class="inline-block px-3 py-1 text-sm font-semibold text-blue-600 bg-blue-100 rounded-full mb-4"
+            >Our Services</span
+          >
+          <h2 class="text-3xl font-bold text-[#0B2C4D] mb-4">
+            Strategic Consulting for Modern Businesses
+          </h2>
+          <div class="w-24 h-1 bg-blue-500 mx-auto mb-6"></div>
+          <p class="text-lg text-gray-600 max-w-3xl mx-auto">
+            We offer a comprehensive suite of consulting services designed to
+            address the diverse needs of organizations across industries. Our
+            expertise spans technology, operations, leadership, and social
+            impact.
+          </p>
+        </div>
+
+        <!-- Service Categories Tabs -->
+        <div class="mb-12">
+          <div class="flex flex-wrap justify-center gap-2 mb-8">
+            <button
+              class="service-tab-btn px-6 py-2 rounded-full font-medium text-sm border border-gray-300 hover:bg-gray-100 active"
+              data-tab="all"
+            >
+              All Services
+            </button>
+            <button
+              class="service-tab-btn px-6 py-2 rounded-full font-medium text-sm border border-gray-300 hover:bg-gray-100"
+              data-tab="technology"
+            >
+              Technology
+            </button>
+            <button
+              class="service-tab-btn px-6 py-2 rounded-full font-medium text-sm border border-gray-300 hover:bg-gray-100"
+              data-tab="operations"
+            >
+              Operations
+            </button>
+            <button
+              class="service-tab-btn px-6 py-2 rounded-full font-medium text-sm border border-gray-300 hover:bg-gray-100"
+              data-tab="leadership"
+            >
+              Leadership
+            </button>
+            <button
+              class="service-tab-btn px-6 py-2 rounded-full font-medium text-sm border border-gray-300 hover:bg-gray-100"
+              data-tab="social-impact"
+            >
+              Social Impact
+            </button>
+          </div>
+        </div>
+
+        <!-- Services Grid -->
+        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <!-- IT Consulting -->
+          <div
+            class="service-card bg-white p-8 rounded-xl shadow-md border border-gray-100"
+            data-category="technology"
+          >
+            <div class="service-icon bg-blue-100 text-blue-600">
+              <svg
+                class="w-8 h-8"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M9 3v2m6-2v2M9 19v2m6-2v2M5 9H3m2 6H3m18-6h-2m2 6h-2M7 19h10a2 2 0 002-2V7a2 2 0 00-2-2H7a2 2 0 00-2 2v10a2 2 0 002 2zM9 9h6v6H9V9z"
+                ></path>
+              </svg>
+            </div>
+            <h3 class="text-xl font-bold text-[#0B2C4D] mb-3">IT Consulting</h3>
+            <p class="text-gray-600 mb-4">
+              Strategic technology planning and digital transformation services
+              to keep your business competitive in the digital age.
+            </p>
+            <ul class="space-y-2 mb-6">
+              <li class="benefit-item">Digital transformation strategy</li>
+              <li class="benefit-item">Cloud migration services</li>
+              <li class="benefit-item">Enterprise architecture</li>
+              <li class="benefit-item">Cybersecurity solutions</li>
+            </ul>
+            <a
+              href="it-consulting.html"
+              class="text-blue-600 font-medium inline-flex items-center"
+              >Learn more
+              <svg
+                class="w-4 h-4 ml-1"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M9 5l7 7-7 7"
+                ></path>
+              </svg>
+            </a>
+          </div>
+
+          <!-- Procurement Solutions -->
+          <div
+            class="service-card bg-white p-8 rounded-xl shadow-md border border-gray-100"
+            data-category="operations"
+          >
+            <div class="service-icon bg-blue-100 text-blue-600">
+              <svg
+                class="w-8 h-8"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10"
+                ></path>
+              </svg>
+            </div>
+            <h3 class="text-xl font-bold text-[#0B2C4D] mb-3">
+              Procurement Solutions
+            </h3>
+            <p class="text-gray-600 mb-4">
+              End-to-end procurement services from vendor selection to contract
+              negotiation and supplier management.
+            </p>
+            <ul class="space-y-2 mb-6">
+              <li class="benefit-item">Strategic sourcing</li>
+              <li class="benefit-item">Supplier vetting</li>
+              <li class="benefit-item">Contract negotiation</li>
+              <li class="benefit-item">Cost optimization</li>
+            </ul>
+            <a
+              href="procurement.html"
+              class="text-blue-600 font-medium inline-flex items-center"
+              >Learn more
+              <svg
+                class="w-4 h-4 ml-1"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M9 5l7 7-7 7"
+                ></path>
+              </svg>
+            </a>
+          </div>
+
+          <!-- Business Vetting -->
+          <div
+            class="service-card bg-white p-8 rounded-xl shadow-md border border-gray-100 relative"
+            data-category="operations"
+          >
+            <span class="feature-badge">Popular</span>
+            <div class="service-icon bg-blue-100 text-blue-600">
+              <svg
+                class="w-8 h-8"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"
+                ></path>
+              </svg>
+            </div>
+            <h3 class="text-xl font-bold text-[#0B2C4D] mb-3">
+              Business Vetting
+            </h3>
+            <p class="text-gray-600 mb-4">
+              Comprehensive due diligence services to evaluate potential
+              partners, investments, and business opportunities.
+            </p>
+            <ul class="space-y-2 mb-6">
+              <li class="benefit-item">Financial analysis</li>
+              <li class="benefit-item">Legal compliance check</li>
+              <li class="benefit-item">Market viability assessment</li>
+              <li class="benefit-item">Risk evaluation</li>
+            </ul>
+            <a
+              href="business-vetting.html"
+              class="text-blue-600 font-medium inline-flex items-center"
+              >Learn more
+              <svg
+                class="w-4 h-4 ml-1"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M9 5l7 7-7 7"
+                ></path>
+              </svg>
+            </a>
+          </div>
+
+          <!-- Supply Chain Management -->
+          <div
+            class="service-card bg-white p-8 rounded-xl shadow-md border border-gray-100"
+            data-category="operations"
+          >
+            <div class="service-icon bg-blue-100 text-blue-600">
+              <svg
+                class="w-8 h-8"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M8 7h12m0 0l-4-4m4 4l-4 4m0 6H4m0 0l4 4m-4-4l4-4"
+                ></path>
+              </svg>
+            </div>
+            <h3 class="text-xl font-bold text-[#0B2C4D] mb-3">
+              Supply Chain Management
+            </h3>
+            <p class="text-gray-600 mb-4">
+              Optimizing your supply chain for efficiency, resilience, and
+              cost-effectiveness in today's complex global market.
+            </p>
+            <ul class="space-y-2 mb-6">
+              <li class="benefit-item">Logistics optimization</li>
+              <li class="benefit-item">Inventory management</li>
+              <li class="benefit-item">Supplier relationship management</li>
+              <li class="benefit-item">Risk mitigation strategies</li>
+            </ul>
+            <a
+              href="supply-chain.html"
+              class="text-blue-600 font-medium inline-flex items-center"
+              >Learn more
+              <svg
+                class="w-4 h-4 ml-1"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M9 5l7 7-7 7"
+                ></path>
+              </svg>
+            </a>
+          </div>
+
+          <!-- Leadership Training -->
+          <div
+            class="service-card bg-white p-8 rounded-xl shadow-md border border-gray-100"
+            data-category="leadership"
+          >
+            <div class="service-icon bg-blue-100 text-blue-600">
+              <svg
+                class="w-8 h-8"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"
+                ></path>
+              </svg>
+            </div>
+            <h3 class="text-xl font-bold text-[#0B2C4D] mb-3">
+              Leadership Training
+            </h3>
+            <p class="text-gray-600 mb-4">
+              Developing leadership capabilities at all levels of your
+              organization through customized training programs.
+            </p>
+            <ul class="space-y-2 mb-6">
+              <li class="benefit-item">Executive coaching</li>
+              <li class="benefit-item">Team leadership development</li>
+              <li class="benefit-item">Change management</li>
+              <li class="benefit-item">Strategic thinking workshops</li>
+            </ul>
+            <a
+              href="leadership-training.html"
+              class="text-blue-600 font-medium inline-flex items-center"
+              >Learn more
+              <svg
+                class="w-4 h-4 ml-1"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M9 5l7 7-7 7"
+                ></path>
+              </svg>
+            </a>
+          </div>
+
+          <!-- HIV Awareness Programs -->
+          <div
+            class="service-card bg-white p-8 rounded-xl shadow-md border border-gray-100"
+            data-category="social-impact"
+          >
+            <div class="service-icon bg-blue-100 text-blue-600">
+              <svg
+                class="w-8 h-8"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-6 9l2 2 4-4"
+                ></path>
+              </svg>
+            </div>
+            <h3 class="text-xl font-bold text-[#0B2C4D] mb-3">
+              HIV Awareness Programs
+            </h3>
+            <p class="text-gray-600 mb-4">
+              Comprehensive workplace programs to educate, prevent, and support
+              employees regarding HIV/AIDS.
+            </p>
+            <ul class="space-y-2 mb-6">
+              <li class="benefit-item">Workplace policy development</li>
+              <li class="benefit-item">Employee education workshops</li>
+              <li class="benefit-item">Testing and counseling services</li>
+              <li class="benefit-item">Stigma reduction initiatives</li>
+            </ul>
+            <a
+              href="hiv-awareness.html"
+              class="text-blue-600 font-medium inline-flex items-center"
+              >Learn more
+              <svg
+                class="w-4 h-4 ml-1"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M9 5l7 7-7 7"
+                ></path>
+              </svg>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Service Process -->
+    <section class="py-16 px-4 bg-white">
+      <div class="max-w-6xl mx-auto">
+        <div class="text-center mb-12">
+          <span
+            class="inline-block px-3 py-1 text-sm font-semibold text-blue-600 bg-blue-100 rounded-full mb-4"
+            >Our Approach</span
+          >
+          <h2 class="text-3xl font-bold text-[#0B2C4D] mb-4">
+            Our Proven Consulting Methodology
+          </h2>
+          <div class="w-24 h-1 bg-blue-500 mx-auto mb-6"></div>
+          <p class="text-lg text-gray-600 max-w-3xl mx-auto">
+            We follow a structured yet flexible approach to ensure we deliver
+            measurable results for every client engagement.
+          </p>
+        </div>
+
+        <div class="grid md:grid-cols-4 gap-8">
+          <!-- Step 1 -->
+          <div class="text-center p-6">
+            <div
+              class="w-16 h-16 bg-blue-100 text-blue-600 rounded-full flex items-center justify-center mx-auto mb-4 text-2xl font-bold"
+            >
+              1
+            </div>
+            <h3 class="text-xl font-semibold text-[#0B2C4D] mb-2">Discovery</h3>
+            <p class="text-gray-600">
+              We begin by thoroughly understanding your business, challenges,
+              and objectives.
+            </p>
+          </div>
+
+          <!-- Step 2 -->
+          <div class="text-center p-6">
+            <div
+              class="w-16 h-16 bg-blue-100 text-blue-600 rounded-full flex items-center justify-center mx-auto mb-4 text-2xl font-bold"
+            >
+              2
+            </div>
+            <h3 class="text-xl font-semibold text-[#0B2C4D] mb-2">Analysis</h3>
+            <p class="text-gray-600">
+              We conduct in-depth analysis to identify opportunities and develop
+              strategies.
+            </p>
+          </div>
+
+          <!-- Step 3 -->
+          <div class="text-center p-6">
+            <div
+              class="w-16 h-16 bg-blue-100 text-blue-600 rounded-full flex items-center justify-center mx-auto mb-4 text-2xl font-bold"
+            >
+              3
+            </div>
+            <h3 class="text-xl font-semibold text-[#0B2C4D] mb-2">
+              Solution Design
+            </h3>
+            <p class="text-gray-600">
+              We create tailored solutions that address your specific needs and
+              challenges.
+            </p>
+          </div>
+
+          <!-- Step 4 -->
+          <div class="text-center p-6">
+            <div
+              class="w-16 h-16 bg-blue-100 text-blue-600 rounded-full flex items-center justify-center mx-auto mb-4 text-2xl font-bold"
+            >
+              4
+            </div>
+            <h3 class="text-xl font-semibold text-[#0B2C4D] mb-2">
+              Implementation
+            </h3>
+            <p class="text-gray-600">
+              We work alongside your team to ensure successful execution and
+              adoption.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="py-16 px-4 bg-gray-50">
+      <div class="max-w-4xl mx-auto text-center">
+        <h2 class="text-3xl font-bold text-[#0B2C4D] mb-6">
+          Ready to Transform Your Business?
+        </h2>
+        <p class="text-lg text-gray-600 mb-8 max-w-2xl mx-auto">
+          Let's discuss how our consulting services can help you achieve your
+          strategic objectives and drive sustainable growth.
+        </p>
+        <div class="flex flex-col sm:flex-row justify-center gap-4">
+          <a
+            href="contact.html"
+            class="inline-flex items-center justify-center px-6 py-3 border border-transparent text-base font-medium rounded-md shadow-sm text-white bg-[#0B2C4D] hover:bg-blue-700 btn-hover-effect"
+          >
+            Get a Free Consultation
+          </a>
+          <a
+            href="tel:+254700123456"
+            class="inline-flex items-center justify-center px-6 py-3 border border-gray-300 text-base font-medium rounded-md shadow-sm text-[#0B2C4D] bg-white hover:bg-gray-50 btn-hover-effect"
+          >
+            <svg
+              class="w-5 h-5 mr-2"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"
+              ></path>
+            </svg>
+            Call Us Now
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-[#0B2C4D] text-white pt-16 pb-8 px-4">
+      <div class="max-w-7xl mx-auto">
+        <div class="grid md:grid-cols-3 gap-8 mb-12">
+          <!-- Column 1 -->
+          <div>
+            <div class="flex items-center mb-4">
+              <div class="logo-icon mr-2">
+                <div class="logo-bar"></div>
+                <div class="logo-bar"></div>
+                <div class="logo-bar"></div>
+              </div>
+              <span class="text-xl font-bold">EsalVentures</span>
+            </div>
+            <p class="text-blue-100 mb-4">
+              Providing strategic business consulting services across Africa
+              since 2008, helping organizations achieve sustainable growth and
+              operational excellence.
+            </p>
+            <div class="flex space-x-4">
+              <a href="#" class="text-blue-300 hover:text-white">
+                <svg
+                  class="w-6 h-6"
+                  fill="currentColor"
+                  viewBox="0 0 24 24"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M22 12c0-5.523-4.477-10-10-10S2 6.477 2 12c0 4.991 3.657 9.128 8.438 9.878v-6.987h-2.54V12h2.54V9.797c0-2.506 1.492-3.89 3.777-3.89 1.094 0 2.238.195 2.238.195v2.46h-1.26c-1.243 0-1.63.771-1.63 1.562V12h2.773l-.443 2.89h-2.33v6.988C18.343 21.128 22 16.991 22 12z"
+                  ></path>
+                </svg>
+              </a>
+              <a href="#" class="text-blue-300 hover:text-white">
+                <svg
+                  class="w-6 h-6"
+                  fill="currentColor"
+                  viewBox="0 0 24 24"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M8.29 20.251c7.547 0 11.675-6.253 11.675-11.675 0-.178 0-.355-.012-.53A8.348 8.348 0 0022 5.92a8.19 8.19 0 01-2.357.646 4.118 4.118 0 001.804-2.27 8.224 8.224 0 01-2.605.996 4.107 4.107 0 00-6.993 3.743 11.65 11.65 0 01-8.457-4.287 4.106 4.106 0 001.27 5.477A4.072 4.072 0 012.8 9.713v.052a4.105 4.105 0 003.292 4.022 4.095 4.095 0 01-1.853.07 4.108 4.108 0 003.834 2.85A8.233 8.233 0 012 18.407a11.616 11.616 0 006.29 1.84"
+                  ></path>
+                </svg>
+              </a>
+              <a href="#" class="text-blue-300 hover:text-white">
+                <svg
+                  class="w-6 h-6"
+                  fill="currentColor"
+                  viewBox="0 0 24 24"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"
+                  ></path>
+                </svg>
+              </a>
+            </div>
+          </div>
+
+          <!-- Column 2 -->
+          <div>
+            <h3 class="text-lg font-semibold mb-4">Quick Links</h3>
+            <ul class="space-y-2">
+              <li>
+                <a href="index.html" class="text-blue-100 hover:text-white"
+                  >Home</a
+                >
+              </li>
+              <li>
+                <a href="services.html" class="text-blue-100 hover:text-white"
+                  >Services</a
+                >
+              </li>
+              <li>
+                <a href="blog.html" class="text-blue-100 hover:text-white"
+                  >Blog</a
+                >
+              </li>
+              <li>
+                <a href="portfolio.html" class="text-blue-100 hover:text-white"
+                  >Portfolio</a
+                >
+              </li>
+              <li>
+                <a href="about.html" class="text-blue-100 hover:text-white"
+                  >Our Story</a
+                >
+              </li>
+            </ul>
+          </div>
+
+          <!-- Column 3 -->
+          <div>
+            <h3 class="text-lg font-semibold mb-4">Contact Info</h3>
+            <address class="not-italic text-blue-100">
+              <div class="mb-2">EsalVentures Consulting</div>
+              <div class="mb-2">ABC Towers, 5th Floor</div>
+              <div class="mb-2">Nairobi, Kenya</div>
+              <div class="mb-2">P.O. Box 12345-00100</div>
+              <div class="mb-2">Phone: +254 700 123456</div>
+              <div class="mb-2">Email: info@esalventures.com</div>
+            </address>
+          </div>
+        </div>
+
+        <div class="border-t border-blue-800 pt-8">
+          <div class="flex flex-col md:flex-row justify-between items-center">
+            <div class="text-blue-300 text-sm mb-4 md:mb-0">
+              &copy; 2023 EsalVentures. All rights reserved.
+            </div>
+            <div class="flex space-x-6">
+              <a
+                href="privacy.html"
+                class="text-blue-300 hover:text-white text-sm"
+                >Privacy Policy</a
+              >
+              <a
+                href="terms.html"
+                class="text-blue-300 hover:text-white text-sm"
+                >Terms of Service</a
+              >
+              <a
+                href="cookies.html"
+                class="text-blue-300 hover:text-white text-sm"
+                >Cookie Policy</a
+              >
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Flowbite JS CDN -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.3.0/flowbite.min.js"></script>
+    <!-- Custom JS -->
+    <script>
+      // Mobile menu toggle
+      document.addEventListener("DOMContentLoaded", function () {
+        const mobileMenuButton = document.querySelector(
+          '[aria-controls="mobile-menu"]'
+        );
+        const mobileMenu = document.getElementById("mobile-menu");
+
+        mobileMenuButton.addEventListener("click", function () {
+          const expanded = this.getAttribute("aria-expanded") === "true";
+          this.setAttribute("aria-expanded", !expanded);
+          mobileMenu.classList.toggle("hidden");
+        });
+
+        // Service category tabs
+        const tabButtons = document.querySelectorAll(".service-tab-btn");
+        const serviceCards = document.querySelectorAll(".service-card");
+
+        tabButtons.forEach((button) => {
+          button.addEventListener("click", () => {
+            // Remove active class from all buttons
+            tabButtons.forEach((btn) =>
+              btn.classList.remove(
+                "active",
+                "bg-blue-100",
+                "text-blue-600",
+                "border-blue-200"
+              )
+            );
+
+            // Add active class to clicked button
+            button.classList.add(
+              "active",
+              "bg-blue-100",
+              "text-blue-600",
+              "border-blue-200"
+            );
+
+            const category = button.getAttribute("data-tab");
+
+            // Show/hide service cards based on category
+            serviceCards.forEach((card) => {
+              if (
+                category === "all" ||
+                card.getAttribute("data-category") === category
+              ) {
+                card.style.display = "block";
+                setTimeout(() => {
+                  card.style.opacity = "1";
+                }, 50);
+              } else {
+                card.style.opacity = "0";
+                setTimeout(() => {
+                  card.style.display = "none";
+                }, 300);
+              }
+            });
+          });
+        });
+
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
+          anchor.addEventListener("click", function (e) {
+            e.preventDefault();
+
+            const targetId = this.getAttribute("href");
+            if (targetId === "#") return;
+
+            const targetElement = document.querySelector(targetId);
+            if (targetElement) {
+              targetElement.scrollIntoView({
+                behavior: "smooth",
+              });
+            }
+          });
+        });
+      });
+    </script>
+  </body>
+</html>

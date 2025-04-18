@@ -1,0 +1,1216 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Our Portfolio | EsalVentures Consulting</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Flowbite CSS CDN -->
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.3.0/flowbite.min.css"
+      rel="stylesheet"
+    />
+    <!-- Google Fonts - Inter -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      body {
+        font-family: "Inter", sans-serif;
+      }
+      .portfolio-hero {
+        background-image: linear-gradient(
+            rgba(11, 44, 77, 0.9),
+            rgba(11, 44, 77, 0.9)
+          ),
+          url("https://images.unsplash.com/photo-1522071820081-009f0129c71c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80");
+        background-size: cover;
+        background-position: center;
+        min-height: 50vh;
+        display: flex;
+        align-items: center;
+      }
+      .nav-container {
+        background: rgba(255, 255, 255, 0.95);
+        backdrop-filter: blur(10px);
+        box-shadow: 0 2px 20px rgba(0, 0, 0, 0.08);
+      }
+      .nav-link {
+        position: relative;
+        color: #0b2c4d;
+        font-weight: 500;
+        transition: all 0.3s ease;
+      }
+      .nav-link:hover {
+        color: #3b82f6;
+      }
+      .nav-link::after {
+        content: "";
+        position: absolute;
+        width: 0;
+        height: 2px;
+        bottom: 0;
+        left: 0;
+        background-color: #3b82f6;
+        transition: width 0.3s ease;
+      }
+      .nav-link:hover::after {
+        width: 100%;
+      }
+      .portfolio-card {
+        transition: all 0.3s ease;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+      }
+      .portfolio-card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1);
+      }
+      .btn-hover-effect {
+        transition: all 0.3s ease;
+        transform: translateY(0);
+      }
+      .btn-hover-effect:hover {
+        transform: translateY(-3px);
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+      }
+      .logo-icon {
+        display: flex;
+        align-items: flex-end;
+        height: 30px;
+      }
+      .logo-bar {
+        width: 4px;
+        background-color: #0b2c4d;
+        margin-right: 3px;
+        border-radius: 2px;
+      }
+      .logo-bar:nth-child(1) {
+        height: 20px;
+      }
+      .logo-bar:nth-child(2) {
+        height: 30px;
+      }
+      .logo-bar:nth-child(3) {
+        height: 25px;
+      }
+      .category-badge {
+        position: absolute;
+        top: 16px;
+        left: 16px;
+        padding: 4px 12px;
+        border-radius: 20px;
+        font-size: 12px;
+        font-weight: 600;
+      }
+      .tag {
+        display: inline-block;
+        padding: 2px 8px;
+        border-radius: 4px;
+        font-size: 12px;
+        font-weight: 500;
+        margin-right: 6px;
+        margin-bottom: 6px;
+      }
+      .testimonial-card {
+        background: rgba(255, 255, 255, 0.05);
+        backdrop-filter: blur(10px);
+        border: 1px solid rgba(255, 255, 255, 0.1);
+      }
+      .stats-item {
+        border-right: 1px solid rgba(255, 255, 255, 0.1);
+      }
+      .stats-item:last-child {
+        border-right: none;
+      }
+    </style>
+  </head>
+  <body class="bg-white">
+    <!-- Navigation Bar -->
+    <nav
+      class="nav-container fixed w-full z-20 top-0 left-0 border-b border-gray-100"
+    >
+      <div class="max-w-7xl mx-auto px-6">
+        <div class="flex justify-between h-20 items-center">
+          <!-- Logo -->
+          <div class="flex items-center">
+            <div class="flex-shrink-0 flex items-center">
+              <div class="logo-icon mr-2">
+                <div class="logo-bar"></div>
+                <div class="logo-bar"></div>
+                <div class="logo-bar"></div>
+              </div>
+              <span class="text-xl font-bold text-[#0B2C4D]">EsalVentures</span>
+            </div>
+          </div>
+
+          <!-- Desktop Navigation -->
+          <div class="hidden md:flex md:items-center md:space-x-8">
+            <div class="flex space-x-8">
+              <a href="index.html" class="nav-link px-3 py-2 text-sm">Home</a>
+              <a href="services.html" class="nav-link px-3 py-2 text-sm"
+                >Services</a
+              >
+              <a href="blog.html" class="nav-link px-3 py-2 text-sm">Blog</a>
+              <a
+                href="portfolio.html"
+                class="nav-link px-3 py-2 text-sm font-semibold text-blue-600"
+                >Portfolio</a
+              >
+
+              <!-- About Dropdown -->
+              <div class="relative group">
+                <button class="nav-link px-3 py-2 text-sm flex items-center">
+                  About
+                  <svg
+                    class="w-4 h-4 ml-1"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                      d="M19 9l-7 7-7-7"
+                    ></path>
+                  </svg>
+                </button>
+                <div
+                  class="absolute hidden group-hover:block bg-white shadow-lg rounded-md mt-2 py-1 w-48 z-10 border border-gray-100"
+                >
+                  <a
+                    href="about.html"
+                    class="block px-4 py-2 text-sm text-gray-700 hover:bg-blue-50 hover:text-blue-600"
+                    >Our Story</a
+                  >
+                  <a
+                    href="team.html"
+                    class="block px-4 py-2 text-sm text-gray-700 hover:bg-blue-50 hover:text-blue-600"
+                    >Team</a
+                  >
+                  <a
+                    href="careers.html"
+                    class="block px-4 py-2 text-sm text-gray-700 hover:bg-blue-50 hover:text-blue-600"
+                    >Careers</a
+                  >
+                  <a
+                    href="resources.html"
+                    class="block px-4 py-2 text-sm text-gray-700 hover:bg-blue-50 hover:text-blue-600"
+                    >Resources</a
+                  >
+                </div>
+              </div>
+            </div>
+
+            <a
+              href="contact.html"
+              class="ml-8 inline-flex items-center px-4 py-2 border border-transparent text-sm font-medium rounded-md shadow-sm text-white bg-[#0B2C4D] hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500 btn-hover-effect"
+            >
+              Get a Consultation
+            </a>
+          </div>
+
+          <!-- Mobile menu button -->
+          <div class="md:hidden flex items-center">
+            <button
+              type="button"
+              class="inline-flex items-center justify-center p-2 rounded-md text-gray-500 hover:text-gray-600 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-blue-500"
+              aria-controls="mobile-menu"
+              aria-expanded="false"
+            >
+              <span class="sr-only">Open main menu</span>
+              <svg
+                class="block h-6 w-6"
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+                aria-hidden="true"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M4 6h16M4 12h16M4 18h16"
+                />
+              </svg>
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Mobile menu -->
+      <div class="md:hidden hidden" id="mobile-menu">
+        <div
+          class="px-2 pt-2 pb-3 space-y-1 sm:px-3 bg-white border-t border-gray-100"
+        >
+          <a
+            href="index.html"
+            class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-blue-500 hover:bg-gray-50"
+            >Home</a
+          >
+          <a
+            href="services.html"
+            class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-blue-500 hover:bg-gray-50"
+            >Services</a
+          >
+          <a
+            href="blog.html"
+            class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-blue-500 hover:bg-gray-50"
+            >Blog</a
+          >
+          <a
+            href="portfolio.html"
+            class="block px-3 py-2 rounded-md text-base font-medium text-blue-600 bg-blue-50"
+            >Portfolio</a
+          >
+          <a
+            href="about.html"
+            class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-blue-500 hover:bg-gray-50"
+            >Our Story</a
+          >
+          <a
+            href="team.html"
+            class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-blue-500 hover:bg-gray-50"
+            >Team</a
+          >
+          <a
+            href="careers.html"
+            class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-blue-500 hover:bg-gray-50"
+            >Careers</a
+          >
+          <a
+            href="resources.html"
+            class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-blue-500 hover:bg-gray-50"
+            >Resources</a
+          >
+          <a
+            href="contact.html"
+            class="block px-3 py-2 rounded-md text-base font-medium text-white bg-[#0B2C4D] hover:bg-blue-700"
+            >Get a Consultation</a
+          >
+        </div>
+      </div>
+    </nav>
+
+    <!-- Portfolio Hero Section -->
+    <section class="portfolio-hero text-white">
+      <div class="max-w-6xl mx-auto px-6 py-24">
+        <div class="max-w-2xl">
+          <h1 class="text-4xl md:text-5xl font-bold mb-6">
+            Our Portfolio of Success
+          </h1>
+          <p class="text-xl text-blue-100 mb-8">
+            Discover how we've helped organizations across Africa transform
+            their operations, implement strategic initiatives, and achieve
+            measurable results.
+          </p>
+          <div class="flex flex-wrap gap-4">
+            <a
+              href="#featured"
+              class="inline-flex items-center px-6 py-3 border border-transparent text-base font-medium rounded-md shadow-sm text-[#0B2C4D] bg-white hover:bg-gray-100 btn-hover-effect"
+            >
+              Featured Projects
+            </a>
+            <a
+              href="#clients"
+              class="inline-flex items-center px-6 py-3 border-2 border-white text-white font-semibold rounded-md hover:bg-white hover:text-[#0B2C4D] transition duration-300 btn-hover-effect"
+            >
+              Our Clients
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Stats Section -->
+    <section class="py-12 bg-blue-600 text-white">
+      <div class="max-w-7xl mx-auto px-4">
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-6">
+          <div class="stats-item pr-6">
+            <div class="text-4xl font-bold mb-2">150+</div>
+            <div class="text-blue-100">Projects Completed</div>
+          </div>
+          <div class="stats-item pr-6">
+            <div class="text-4xl font-bold mb-2">12+</div>
+            <div class="text-blue-100">Years Experience</div>
+          </div>
+          <div class="stats-item pr-6">
+            <div class="text-4xl font-bold mb-2">95%</div>
+            <div class="text-blue-100">Client Retention</div>
+          </div>
+          <div class="stats-item">
+            <div class="text-4xl font-bold mb-2">8</div>
+            <div class="text-blue-100">African Countries</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Featured Projects -->
+    <section id="featured" class="py-16 px-4 bg-gray-50">
+      <div class="max-w-6xl mx-auto">
+        <div class="text-center mb-12">
+          <span
+            class="inline-block px-3 py-1 text-sm font-semibold text-blue-600 bg-blue-100 rounded-full mb-4"
+            >Case Studies</span
+          >
+          <h2 class="text-3xl font-bold text-[#0B2C4D] mb-4">
+            Featured Projects
+          </h2>
+          <div class="w-24 h-1 bg-blue-500 mx-auto mb-6"></div>
+          <p class="text-lg text-gray-600 max-w-3xl mx-auto">
+            Explore some of our most impactful consulting engagements across
+            various industries and business functions.
+          </p>
+        </div>
+
+        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <!-- Project 1 -->
+          <div
+            class="portfolio-card bg-white rounded-lg overflow-hidden shadow-md"
+          >
+            <div class="relative">
+              <img
+                src="https://images.unsplash.com/photo-1556740738-b6a63e27c4df?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80"
+                alt="Government Procurement"
+                class="w-full h-48 object-cover"
+              />
+              <span class="category-badge bg-blue-600 text-white"
+                >Public Sector</span
+              >
+            </div>
+            <div class="p-6">
+              <h3 class="text-xl font-bold text-[#0B2C4D] mb-3">
+                National Government Procurement Transformation
+              </h3>
+              <p class="text-gray-600 mb-4">
+                Implemented a comprehensive procurement transformation program
+                for a national government ministry, achieving 30% cost savings
+                and reducing processing times by 45%.
+              </p>
+              <div class="flex flex-wrap mb-4">
+                <span class="tag bg-blue-100 text-blue-800">Procurement</span>
+                <span class="tag bg-blue-100 text-blue-800"
+                  >Process Optimization</span
+                >
+                <span class="tag bg-blue-100 text-blue-800">Public Sector</span>
+              </div>
+              <a
+                href="government-procurement-case-study.html"
+                class="text-blue-600 font-medium inline-flex items-center"
+                >View Case Study
+                <svg
+                  class="w-4 h-4 ml-1"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M9 5l7 7-7 7"
+                  ></path>
+                </svg>
+              </a>
+            </div>
+          </div>
+
+          <!-- Project 2 -->
+          <div
+            class="portfolio-card bg-white rounded-lg overflow-hidden shadow-md"
+          >
+            <div class="relative">
+              <img
+                src="https://images.unsplash.com/photo-1556740738-b6a63e27c4df?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80"
+                alt="Healthcare Supply Chain"
+                class="w-full h-48 object-cover"
+              />
+              <span class="category-badge bg-green-600 text-white"
+                >Healthcare</span
+              >
+            </div>
+            <div class="p-6">
+              <h3 class="text-xl font-bold text-[#0B2C4D] mb-3">
+                Regional Healthcare Supply Chain Optimization
+              </h3>
+              <p class="text-gray-600 mb-4">
+                Redesigned the supply chain network for a regional healthcare
+                provider, reducing stockouts by 75% and cutting logistics costs
+                by 22% across 15 facilities.
+              </p>
+              <div class="flex flex-wrap mb-4">
+                <span class="tag bg-green-100 text-green-800"
+                  >Supply Chain</span
+                >
+                <span class="tag bg-green-100 text-green-800">Healthcare</span>
+                <span class="tag bg-green-100 text-green-800">Logistics</span>
+              </div>
+              <a
+                href="healthcare-supply-chain-case-study.html"
+                class="text-blue-600 font-medium inline-flex items-center"
+                >View Case Study
+                <svg
+                  class="w-4 h-4 ml-1"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M9 5l7 7-7 7"
+                  ></path>
+                </svg>
+              </a>
+            </div>
+          </div>
+
+          <!-- Project 3 -->
+          <div
+            class="portfolio-card bg-white rounded-lg overflow-hidden shadow-md"
+          >
+            <div class="relative">
+              <img
+                src="https://images.unsplash.com/photo-1552664730-d307ca884978?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80"
+                alt="Banking Digital Transformation"
+                class="w-full h-48 object-cover"
+              />
+              <span class="category-badge bg-purple-600 text-white"
+                >Financial Services</span
+              >
+            </div>
+            <div class="p-6">
+              <h3 class="text-xl font-bold text-[#0B2C4D] mb-3">
+                Commercial Bank Digital Transformation
+              </h3>
+              <p class="text-gray-600 mb-4">
+                Led the digital transformation initiative for a commercial bank,
+                resulting in 40% increase in digital transactions and 35%
+                reduction in operational costs.
+              </p>
+              <div class="flex flex-wrap mb-4">
+                <span class="tag bg-purple-100 text-purple-800"
+                  >Digital Banking</span
+                >
+                <span class="tag bg-purple-100 text-purple-800"
+                  >Process Automation</span
+                >
+                <span class="tag bg-purple-100 text-purple-800"
+                  >Customer Experience</span
+                >
+              </div>
+              <a
+                href="bank-digital-transformation-case-study.html"
+                class="text-blue-600 font-medium inline-flex items-center"
+                >View Case Study
+                <svg
+                  class="w-4 h-4 ml-1"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M9 5l7 7-7 7"
+                  ></path>
+                </svg>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <div class="text-center mt-12">
+          <a
+            href="all-projects.html"
+            class="inline-flex items-center px-6 py-3 border border-[#0B2C4D] text-base font-medium rounded-md shadow-sm text-[#0B2C4D] hover:bg-[#0B2C4D] hover:text-white btn-hover-effect"
+          >
+            View All Projects
+            <svg
+              class="ml-2 -mr-1 w-5 h-5"
+              fill="currentColor"
+              viewBox="0 0 20 20"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                fill-rule="evenodd"
+                d="M10.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L12.586 11H5a1 1 0 110-2h7.586l-2.293-2.293a1 1 0 010-1.414z"
+                clip-rule="evenodd"
+              ></path>
+            </svg>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Industries Section -->
+    <section class="py-16 px-4 bg-white">
+      <div class="max-w-6xl mx-auto">
+        <div class="text-center mb-12">
+          <span
+            class="inline-block px-3 py-1 text-sm font-semibold text-blue-600 bg-blue-100 rounded-full mb-4"
+            >Our Expertise</span
+          >
+          <h2 class="text-3xl font-bold text-[#0B2C4D] mb-4">
+            Industries We Serve
+          </h2>
+          <div class="w-24 h-1 bg-blue-500 mx-auto mb-6"></div>
+          <p class="text-lg text-gray-600 max-w-3xl mx-auto">
+            We bring deep industry knowledge and specialized expertise to help
+            clients navigate their unique challenges.
+          </p>
+        </div>
+
+        <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+          <!-- Industry 1 -->
+          <div class="group">
+            <div
+              class="bg-white p-8 rounded-xl shadow-md text-center h-full transition duration-300 group-hover:bg-blue-50 border border-gray-100"
+            >
+              <div
+                class="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4 text-blue-600 group-hover:bg-blue-200"
+              >
+                <svg
+                  class="w-8 h-8"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"
+                  ></path>
+                </svg>
+              </div>
+              <h3
+                class="text-xl font-bold text-[#0B2C4D] mb-2 group-hover:text-blue-700"
+              >
+                Public Sector
+              </h3>
+              <p class="text-gray-600">
+                Government ministries, agencies, and public institutions
+              </p>
+            </div>
+          </div>
+
+          <!-- Industry 2 -->
+          <div class="group">
+            <div
+              class="bg-white p-8 rounded-xl shadow-md text-center h-full transition duration-300 group-hover:bg-green-50 border border-gray-100"
+            >
+              <div
+                class="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4 text-green-600 group-hover:bg-green-200"
+              >
+                <svg
+                  class="w-8 h-8"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z"
+                  ></path>
+                </svg>
+              </div>
+              <h3
+                class="text-xl font-bold text-[#0B2C4D] mb-2 group-hover:text-green-700"
+              >
+                Healthcare
+              </h3>
+              <p class="text-gray-600">
+                Hospitals, clinics, and healthcare providers
+              </p>
+            </div>
+          </div>
+
+          <!-- Industry 3 -->
+          <div class="group">
+            <div
+              class="bg-white p-8 rounded-xl shadow-md text-center h-full transition duration-300 group-hover:bg-purple-50 border border-gray-100"
+            >
+              <div
+                class="w-16 h-16 bg-purple-100 rounded-full flex items-center justify-center mx-auto mb-4 text-purple-600 group-hover:bg-purple-200"
+              >
+                <svg
+                  class="w-8 h-8"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z"
+                  ></path>
+                </svg>
+              </div>
+              <h3
+                class="text-xl font-bold text-[#0B2C4D] mb-2 group-hover:text-purple-700"
+              >
+                Financial Services
+              </h3>
+              <p class="text-gray-600">
+                Banks, insurance companies, and fintech firms
+              </p>
+            </div>
+          </div>
+
+          <!-- Industry 4 -->
+          <div class="group">
+            <div
+              class="bg-white p-8 rounded-xl shadow-md text-center h-full transition duration-300 group-hover:bg-yellow-50 border border-gray-100"
+            >
+              <div
+                class="w-16 h-16 bg-yellow-100 rounded-full flex items-center justify-center mx-auto mb-4 text-yellow-600 group-hover:bg-yellow-200"
+              >
+                <svg
+                  class="w-8 h-8"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z"
+                  ></path>
+                </svg>
+              </div>
+              <h3
+                class="text-xl font-bold text-[#0B2C4D] mb-2 group-hover:text-yellow-700"
+              >
+                Retail & FMCG
+              </h3>
+              <p class="text-gray-600">
+                Consumer goods manufacturers and retailers
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Client Testimonials -->
+    <section id="clients" class="py-16 px-4 bg-[#0B2C4D] text-white">
+      <div class="max-w-6xl mx-auto">
+        <div class="text-center mb-12">
+          <span
+            class="inline-block px-3 py-1 text-sm font-semibold text-blue-300 bg-blue-900 bg-opacity-30 rounded-full mb-4"
+            >Client Voices</span
+          >
+          <h2 class="text-3xl font-bold mb-4">What Our Clients Say</h2>
+          <div class="w-24 h-1 bg-blue-400 mx-auto mb-6"></div>
+          <p class="text-lg text-blue-100 max-w-3xl mx-auto">
+            Hear directly from organizations that have partnered with us to
+            achieve transformational results.
+          </p>
+        </div>
+
+        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <!-- Testimonial 1 -->
+          <div class="testimonial-card p-8 rounded-lg">
+            <div class="flex items-center mb-4">
+              <div
+                class="w-12 h-12 rounded-full bg-blue-700 flex items-center justify-center text-xl font-bold mr-4"
+              >
+                JD
+              </div>
+              <div>
+                <h4 class="font-bold">Jane Doe</h4>
+                <p class="text-blue-200 text-sm">
+                  Procurement Director, Ministry of Health
+                </p>
+              </div>
+            </div>
+            <p class="mb-4">
+              "EsalVentures transformed our procurement function, implementing
+              systems that reduced processing times by 45% while improving
+              compliance. Their team brought both technical expertise and deep
+              understanding of public sector challenges."
+            </p>
+            <div class="flex text-yellow-400">
+              <svg
+                class="w-5 h-5"
+                fill="currentColor"
+                viewBox="0 0 20 20"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"
+                ></path>
+              </svg>
+              <svg
+                class="w-5 h-5"
+                fill="currentColor"
+                viewBox="0 0 20 20"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"
+                ></path>
+              </svg>
+              <svg
+                class="w-5 h-5"
+                fill="currentColor"
+                viewBox="0 0 20 20"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"
+                ></path>
+              </svg>
+              <svg
+                class="w-5 h-5"
+                fill="currentColor"
+                viewBox="0 0 20 20"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"
+                ></path>
+              </svg>
+              <svg
+                class="w-5 h-5"
+                fill="currentColor"
+                viewBox="0 0 20 20"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"
+                ></path>
+              </svg>
+            </div>
+          </div>
+
+          <!-- Testimonial 2 -->
+          <div class="testimonial-card p-8 rounded-lg">
+            <div class="flex items-center mb-4">
+              <div
+                class="w-12 h-12 rounded-full bg-blue-700 flex items-center justify-center text-xl font-bold mr-4"
+              >
+                AS
+              </div>
+              <div>
+                <h4 class="font-bold">Ahmed Suleiman</h4>
+                <p class="text-blue-200 text-sm">
+                  CEO, Regional Healthcare Network
+                </p>
+              </div>
+            </div>
+            <p class="mb-4">
+              "The supply chain optimization project led by EsalVentures has
+              been transformative for our healthcare network. We've seen
+              dramatic reductions in stockouts while achieving significant cost
+              savings - exactly what we needed to improve patient care."
+            </p>
+            <div class="flex text-yellow-400">
+              <svg
+                class="w-5 h-5"
+                fill="currentColor"
+                viewBox="0 0 20 20"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"
+                ></path>
+              </svg>
+              <svg
+                class="w-5 h-5"
+                fill="currentColor"
+                viewBox="0 0 20 20"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"
+                ></path>
+              </svg>
+              <svg
+                class="w-5 h-5"
+                fill="currentColor"
+                viewBox="0 0 20 20"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"
+                ></path>
+              </svg>
+              <svg
+                class="w-5 h-5"
+                fill="currentColor"
+                viewBox="0 0 20 20"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"
+                ></path>
+              </svg>
+              <svg
+                class="w-5 h-5"
+                fill="currentColor"
+                viewBox="0 0 20 20"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"
+                ></path>
+              </svg>
+            </div>
+          </div>
+
+          <!-- Testimonial 3 -->
+          <div class="testimonial-card p-8 rounded-lg">
+            <div class="flex items-center mb-4">
+              <div
+                class="w-12 h-12 rounded-full bg-blue-700 flex items-center justify-center text-xl font-bold mr-4"
+              >
+                MK
+              </div>
+              <div>
+                <h4 class="font-bold">Mary Kamau</h4>
+                <p class="text-blue-200 text-sm">
+                  Chief Digital Officer, Continental Bank
+                </p>
+              </div>
+            </div>
+            <p class="mb-4">
+              "EsalVentures' digital transformation roadmap was exactly what our
+              bank needed. Their consultants understood both the technical and
+              cultural challenges of digital banking in Africa. The results have
+              exceeded our expectations."
+            </p>
+            <div class="flex text-yellow-400">
+              <svg
+                class="w-5 h-5"
+                fill="currentColor"
+                viewBox="0 0 20 20"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"
+                ></path>
+              </svg>
+              <svg
+                class="w-5 h-5"
+                fill="currentColor"
+                viewBox="0 0 20 20"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"
+                ></path>
+              </svg>
+              <svg
+                class="w-5 h-5"
+                fill="currentColor"
+                viewBox="0 0 20 20"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"
+                ></path>
+              </svg>
+              <svg
+                class="w-5 h-5"
+                fill="currentColor"
+                viewBox="0 0 20 20"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"
+                ></path>
+              </svg>
+              <svg
+                class="w-5 h-5"
+                fill="currentColor"
+                viewBox="0 0 20 20"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"
+                ></path>
+              </svg>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Client Logos -->
+    <section class="py-16 px-4 bg-white">
+      <div class="max-w-6xl mx-auto">
+        <div class="text-center mb-12">
+          <span
+            class="inline-block px-3 py-1 text-sm font-semibold text-blue-600 bg-blue-100 rounded-full mb-4"
+            >Trusted By</span
+          >
+          <h2 class="text-3xl font-bold text-[#0B2C4D] mb-4">Our Clients</h2>
+          <div class="w-24 h-1 bg-blue-500 mx-auto mb-6"></div>
+          <p class="text-lg text-gray-600 max-w-3xl mx-auto">
+            We're proud to partner with leading organizations across Africa to
+            drive transformation and growth.
+          </p>
+        </div>
+
+        <div
+          class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-8 items-center"
+        >
+          <div class="flex justify-center">
+            <img
+              src="https://via.placeholder.com/150x80?text=Client+1"
+              alt="Client Logo"
+              class="h-12 object-contain opacity-70 hover:opacity-100 transition duration-300"
+            />
+          </div>
+          <div class="flex justify-center">
+            <img
+              src="https://via.placeholder.com/150x80?text=Client+2"
+              alt="Client Logo"
+              class="h-12 object-contain opacity-70 hover:opacity-100 transition duration-300"
+            />
+          </div>
+          <div class="flex justify-center">
+            <img
+              src="https://via.placeholder.com/150x80?text=Client+3"
+              alt="Client Logo"
+              class="h-12 object-contain opacity-70 hover:opacity-100 transition duration-300"
+            />
+          </div>
+          <div class="flex justify-center">
+            <img
+              src="https://via.placeholder.com/150x80?text=Client+4"
+              alt="Client Logo"
+              class="h-12 object-contain opacity-70 hover:opacity-100 transition duration-300"
+            />
+          </div>
+          <div class="flex justify-center">
+            <img
+              src="https://via.placeholder.com/150x80?text=Client+5"
+              alt="Client Logo"
+              class="h-12 object-contain opacity-70 hover:opacity-100 transition duration-300"
+            />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="py-16 px-4 bg-blue-600 text-white">
+      <div class="max-w-4xl mx-auto text-center">
+        <h2 class="text-3xl font-bold mb-6">
+          Ready to Transform Your Business?
+        </h2>
+        <p class="text-blue-100 mb-8 max-w-2xl mx-auto">
+          Let's discuss how our consulting expertise can help your organization
+          achieve its strategic objectives and operational excellence.
+        </p>
+        <a
+          href="contact.html"
+          class="inline-flex items-center px-8 py-4 border border-transparent text-base font-medium rounded-md shadow-sm text-[#0B2C4D] bg-white hover:bg-gray-100 btn-hover-effect"
+        >
+          Get Started Today
+          <svg
+            class="ml-2 -mr-1 w-5 h-5"
+            fill="currentColor"
+            viewBox="0 0 20 20"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              fill-rule="evenodd"
+              d="M10.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L12.586 11H5a1 1 0 110-2h7.586l-2.293-2.293a1 1 0 010-1.414z"
+              clip-rule="evenodd"
+            ></path>
+          </svg>
+        </a>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-[#0B2C4D] text-white pt-16 pb-8 px-4">
+      <div class="max-w-7xl mx-auto">
+        <div class="grid md:grid-cols-3 gap-8 mb-12">
+          <!-- Column 1 -->
+          <div>
+            <div class="flex items-center mb-4">
+              <div class="logo-icon mr-2">
+                <div class="logo-bar"></div>
+                <div class="logo-bar"></div>
+                <div class="logo-bar"></div>
+              </div>
+              <span class="text-xl font-bold">EsalVentures</span>
+            </div>
+            <p class="text-blue-100 mb-4">
+              Providing strategic business consulting services across Africa
+              since 2008, helping organizations achieve sustainable growth and
+              operational excellence.
+            </p>
+            <div class="flex space-x-4">
+              <a href="#" class="text-blue-300 hover:text-white">
+                <svg
+                  class="w-6 h-6"
+                  fill="currentColor"
+                  viewBox="0 0 24 24"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M22 12c0-5.523-4.477-10-10-10S2 6.477 2 12c0 4.991 3.657 9.128 8.438 9.878v-6.987h-2.54V12h2.54V9.797c0-2.506 1.492-3.89 3.777-3.89 1.094 0 2.238.195 2.238.195v2.46h-1.26c-1.243 0-1.63.771-1.63 1.562V12h2.773l-.443 2.89h-2.33v6.988C18.343 21.128 22 16.991 22 12z"
+                  ></path>
+                </svg>
+              </a>
+              <a href="#" class="text-blue-300 hover:text-white">
+                <svg
+                  class="w-6 h-6"
+                  fill="currentColor"
+                  viewBox="0 0 24 24"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M8.29 20.251c7.547 0 11.675-6.253 11.675-11.675 0-.178 0-.355-.012-.53A8.348 8.348 0 0022 5.92a8.19 8.19 0 01-2.357.646 4.118 4.118 0 001.804-2.27 8.224 8.224 0 01-2.605.996 4.107 4.107 0 00-6.993 3.743 11.65 11.65 0 01-8.457-4.287 4.106 4.106 0 001.27 5.477A4.072 4.072 0 012.8 9.713v.052a4.105 4.105 0 003.292 4.022 4.095 4.095 0 01-1.853.07 4.108 4.108 0 003.834 2.85A8.233 8.233 0 012 18.407a11.616 11.616 0 006.29 1.84"
+                  ></path>
+                </svg>
+              </a>
+              <a href="#" class="text-blue-300 hover:text-white">
+                <svg
+                  class="w-6 h-6"
+                  fill="currentColor"
+                  viewBox="0 0 24 24"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"
+                  ></path>
+                </svg>
+              </a>
+            </div>
+          </div>
+
+          <!-- Column 2 -->
+          <div>
+            <h3 class="text-lg font-semibold mb-4">Quick Links</h3>
+            <ul class="space-y-2">
+              <li>
+                <a href="index.html" class="text-blue-100 hover:text-white"
+                  >Home</a
+                >
+              </li>
+              <li>
+                <a href="services.html" class="text-blue-100 hover:text-white"
+                  >Services</a
+                >
+              </li>
+              <li>
+                <a href="blog.html" class="text-blue-100 hover:text-white"
+                  >Blog</a
+                >
+              </li>
+              <li>
+                <a href="portfolio.html" class="text-blue-100 hover:text-white"
+                  >Portfolio</a
+                >
+              </li>
+              <li>
+                <a href="about.html" class="text-blue-100 hover:text-white"
+                  >Our Story</a
+                >
+              </li>
+            </ul>
+          </div>
+
+          <!-- Column 3 -->
+          <div>
+            <h3 class="text-lg font-semibold mb-4">Contact Info</h3>
+            <address class="not-italic text-blue-100">
+              <div class="mb-2">EsalVentures Consulting</div>
+              <div class="mb-2">ABC Towers, 5th Floor</div>
+              <div class="mb-2">Nairobi, Kenya</div>
+              <div class="mb-2">P.O. Box 12345-00100</div>
+              <div class="mb-2">Phone: +254 700 123456</div>
+              <div class="mb-2">Email: info@esalventures.com</div>
+            </address>
+          </div>
+        </div>
+
+        <div class="border-t border-blue-800 pt-8">
+          <div class="flex flex-col md:flex-row justify-between items-center">
+            <div class="text-blue-300 text-sm mb-4 md:mb-0">
+              &copy; 2023 EsalVentures. All rights reserved.
+            </div>
+            <div class="flex space-x-6">
+              <a
+                href="privacy.html"
+                class="text-blue-300 hover:text-white text-sm"
+                >Privacy Policy</a
+              >
+              <a
+                href="terms.html"
+                class="text-blue-300 hover:text-white text-sm"
+                >Terms of Service</a
+              >
+              <a
+                href="cookies.html"
+                class="text-blue-300 hover:text-white text-sm"
+                >Cookie Policy</a
+              >
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Flowbite JS CDN -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.3.0/flowbite.min.js"></script>
+    <!-- Custom JS -->
+    <script>
+      // Mobile menu toggle
+      document.addEventListener("DOMContentLoaded", function () {
+        const mobileMenuButton = document.querySelector(
+          '[aria-controls="mobile-menu"]'
+        );
+        const mobileMenu = document.getElementById("mobile-menu");
+
+        mobileMenuButton.addEventListener("click", function () {
+          const expanded = this.getAttribute("aria-expanded") === "true";
+          this.setAttribute("aria-expanded", !expanded);
+          mobileMenu.classList.toggle("hidden");
+        });
+
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
+          anchor.addEventListener("click", function (e) {
+            e.preventDefault();
+
+            const targetId = this.getAttribute("href");
+            if (targetId === "#") return;
+
+            const targetElement = document.querySelector(targetId);
+            if (targetElement) {
+              targetElement.scrollIntoView({
+                behavior: "smooth",
+              });
+            }
+          });
+        });
+      });
+    </script>
+  </body>
+</html>
