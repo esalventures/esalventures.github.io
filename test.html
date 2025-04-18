@@ -84,10 +84,10 @@
       }
       .hero-section {
         background-image: linear-gradient(
-            rgba(0, 43, 91, 0.8),
-            rgba(0, 43, 91, 0.8)
+            rgba(0, 43, 91, 0.85),
+            rgba(0, 43, 91, 0.85)
           ),
-          url("https://images.unsplash.com/photo-1677442135136-760c813a743e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1587&q=80");
+          url("https://images.unsplash.com/photo-1593508512255-86ab42a8e620?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1587&q=80");
         background-size: cover;
         background-position: center;
         background-repeat: no-repeat;
@@ -101,6 +101,17 @@
           padding: 0.5rem 1rem;
           font-size: 0.875rem;
           border-radius: 9999px;
+        }
+        .newsletter-form {
+          flex-direction: column;
+        }
+        .newsletter-input {
+          border-radius: 0.375rem;
+          margin-bottom: 0.5rem;
+        }
+        .newsletter-button {
+          border-radius: 0.375rem;
+          width: 100%;
         }
       }
       .footer-link::after {
@@ -859,15 +870,15 @@
             </p>
           </div>
           <div>
-            <form class="flex">
+            <form class="flex newsletter-form">
               <input
                 type="email"
                 placeholder="Your email address"
-                class="flex-grow px-4 py-3 rounded-l-md focus:outline-none text-gray-900"
+                class="flex-grow px-4 py-3 rounded-l-md focus:outline-none text-gray-900 newsletter-input"
               />
               <button
                 type="submit"
-                class="bg-primary text-white font-medium px-6 py-3 rounded-r-md hover:bg-opacity-90 transition"
+                class="bg-primary text-white font-medium px-6 py-3 rounded-r-md hover:bg-opacity-90 transition newsletter-button"
               >
                 Subscribe
               </button>
