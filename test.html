@@ -46,16 +46,11 @@
             },
             animation: {
               "fade-in": "fadeIn 1s ease-in-out",
-              float: "float 6s ease-in-out infinite",
             },
             keyframes: {
               fadeIn: {
                 "0%": { opacity: "0" },
                 "100%": { opacity: "1" },
-              },
-              float: {
-                "0%, 100%": { transform: "translateY(0)" },
-                "50%": { transform: "translateY(-10px)" },
               },
             },
           },
@@ -63,12 +58,6 @@
       };
     </script>
     <style type="text/css">
-      .glass-card {
-        background: rgba(255, 255, 255, 0.08);
-        backdrop-filter: blur(10px);
-        -webkit-backdrop-filter: blur(10px);
-        border: 1px solid rgba(255, 255, 255, 0.1);
-      }
       .gradient-text {
         background: linear-gradient(90deg, #00b4d8 0%, #5c6bc0 100%);
         -webkit-background-clip: text;
@@ -98,7 +87,7 @@
             rgba(0, 43, 91, 0.8),
             rgba(0, 43, 91, 0.8)
           ),
-          url("https://images.unsplash.com/photo-1593508512255-86ab42a8e620?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1587&q=80");
+          url("https://images.unsplash.com/photo-1677442135136-760c813a743e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1587&q=80");
         background-size: cover;
         background-position: center;
         background-repeat: no-repeat;
@@ -113,6 +102,15 @@
           font-size: 0.875rem;
           border-radius: 9999px;
         }
+      }
+      .footer-link::after {
+        content: "•";
+        margin: 0 0.5rem;
+        color: #9ca3af;
+      }
+      .footer-link:last-child::after {
+        content: "";
+        margin: 0;
       }
     </style>
   </head>
@@ -161,20 +159,24 @@
             >
           </div>
           <div class="md:hidden flex items-center">
-            <button id="menu-toggle" class="text-primary focus:outline-none">
+            <button
+              id="menu-toggle"
+              type="button"
+              class="inline-flex items-center justify-center p-2 rounded-md text-primary focus:outline-none"
+            >
               <svg
-                class="w-6 h-6"
-                fill="none"
-                stroke="currentColor"
-                viewBox="0 0 24 24"
+                class="h-6 w-6"
                 xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
               >
                 <path
                   stroke-linecap="round"
                   stroke-linejoin="round"
                   stroke-width="2"
-                  d="M4 6h16M4 12h16m-7 6h7"
-                ></path>
+                  d="M4 6h16M4 12h16M4 18h16"
+                />
               </svg>
             </button>
           </div>
@@ -221,20 +223,22 @@
       class="hero-section pt-24 pb-16 md:pt-32 md:pb-24 text-white"
     >
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div class="grid md:grid-cols-2 gap-12 items-center">
-          <div class="animate-fade-in">
+        <div class="grid md:grid-cols-1 gap-12 items-center">
+          <div class="animate-fade-in text-center md:text-left">
             <h1
               class="text-4xl md:text-5xl lg:text-6xl font-heading font-bold mb-6 leading-tight"
             >
               AI-Driven Business
               <span class="gradient-text">Transformation</span>
             </h1>
-            <p class="text-lg text-gray-200 mb-8">
+            <p class="text-lg text-gray-200 mb-8 max-w-2xl mx-auto md:mx-0">
               Esal Ventures helps enterprises leverage artificial intelligence
               to optimize operations, reduce costs, and gain competitive
               advantage in the digital age.
             </p>
-            <div class="flex flex-col sm:flex-row gap-4 hero-buttons">
+            <div
+              class="flex flex-col sm:flex-row gap-4 hero-buttons justify-center md:justify-start"
+            >
               <a
                 href="#contact"
                 class="bg-white text-primary font-medium py-2 px-4 md:py-3 md:px-6 rounded-full md:rounded-md hover:bg-opacity-90 transition shadow-md hero-button"
@@ -245,15 +249,6 @@
                 class="border border-white text-white hover:bg-white hover:bg-opacity-10 font-medium py-2 px-4 md:py-3 md:px-6 rounded-full md:rounded-md transition hero-button"
                 >Explore Services</a
               >
-            </div>
-          </div>
-          <div class="animate-float hidden md:block">
-            <div class="glass-card p-6 rounded-2xl shadow-xl">
-              <img
-                src="https://images.unsplash.com/photo-1620712943543-bcc4688e7485?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1587&q=80"
-                alt="AI Consulting"
-                class="rounded-lg shadow-md"
-              />
             </div>
           </div>
         </div>
@@ -444,18 +439,11 @@
       </div>
     </section>
 
-    <!-- About Section -->
+    <!-- About Section - Side by side layout -->
     <section id="about" class="py-16 bg-gray-50">
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="grid md:grid-cols-2 gap-12 items-center">
-          <div>
-            <img
-              src="https://images.unsplash.com/photo-1573164713988-8665fc963095?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1587&q=80"
-              alt="About Esal Ventures"
-              class="rounded-xl shadow-lg"
-            />
-          </div>
-          <div>
+          <div class="order-2 md:order-1">
             <span class="text-secondary font-medium">OUR APPROACH</span>
             <h2
               class="text-3xl md:text-4xl font-heading font-bold text-primary mt-2 mb-6"
@@ -505,11 +493,18 @@
               </div>
             </div>
           </div>
+          <div class="order-1 md:order-2">
+            <img
+              src="https://images.unsplash.com/photo-1573164713988-8665fc963095?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1587&q=80"
+              alt="About Esal Ventures"
+              class="rounded-xl shadow-lg w-full"
+            />
+          </div>
         </div>
       </div>
     </section>
 
-    <!-- Blog Section -->
+    <!-- Blog Section with compelling images -->
     <section id="blog" class="py-16 bg-white">
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="text-center mb-12">
@@ -540,11 +535,11 @@
               <h3
                 class="text-xl font-heading font-semibold text-primary mt-2 mb-3"
               >
-                Generative AI: The Next Frontier for Enterprises
+                Generative AI Revolutionizes Content Creation
               </h3>
               <p class="text-gray-600 mb-4">
-                How large language models are transforming business operations
-                across industries.
+                How AI models like GPT-4 are transforming marketing, design, and
+                media production across industries.
               </p>
               <a
                 href="#"
@@ -583,11 +578,11 @@
               <h3
                 class="text-xl font-heading font-semibold text-primary mt-2 mb-3"
               >
-                Measuring AI ROI: Key Metrics That Matter
+                The Rise of AI-Powered Cybersecurity
               </h3>
               <p class="text-gray-600 mb-4">
-                Quantifying the business impact of artificial intelligence
-                investments.
+                How machine learning is becoming the frontline defense against
+                sophisticated cyber threats.
               </p>
               <a
                 href="#"
@@ -626,11 +621,11 @@
               <h3
                 class="text-xl font-heading font-semibold text-primary mt-2 mb-3"
               >
-                Ethical AI: Building Responsible Systems
+                AI in Financial Services: The 2023 Landscape
               </h3>
               <p class="text-gray-600 mb-4">
-                Best practices for ensuring fairness, transparency, and
-                accountability in AI deployments.
+                From algorithmic trading to fraud detection, how AI is reshaping
+                the finance industry.
               </p>
               <a
                 href="#"
@@ -885,7 +880,7 @@
       </div>
     </section>
 
-    <!-- Footer -->
+    <!-- Footer with dot separators -->
     <footer class="bg-gray-900 text-white py-12 border-t border-gray-800">
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="grid md:grid-cols-4 gap-8">
@@ -1007,15 +1002,19 @@
         </div>
 
         <div class="border-t border-gray-800 mt-12 pt-8">
-          <div class="grid md:grid-cols-2 gap-4">
-            <p class="text-gray-400">
+          <div class="flex flex-col md:flex-row justify-between items-center">
+            <p class="text-gray-400 mb-4 md:mb-0">
               &copy; 2023 Esal Ventures. All rights reserved.
             </p>
-            <div class="md:text-right">
-              <a href="#" class="text-gray-400 hover:text-white transition mr-4"
+            <div class="flex items-center">
+              <a
+                href="#"
+                class="text-gray-400 hover:text-white transition footer-link"
                 >Privacy Policy</a
               >
-              <a href="#" class="text-gray-400 hover:text-white transition mr-4"
+              <a
+                href="#"
+                class="text-gray-400 hover:text-white transition footer-link"
                 >Terms of Service</a
               >
               <a href="#" class="text-gray-400 hover:text-white transition"
