@@ -1,0 +1,1021 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>NexusAI Consulting | Future-Proof Your Business</title>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Flowbite CSS -->
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.3.0/flowbite.min.css"
+      rel="stylesheet"
+    />
+    <!-- Google Fonts - Futuristic but professional -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <!-- Custom styles -->
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              primary: "#002B5B",
+              secondary: "#5C6BC0",
+              accent: "#00B4D8",
+              gray: {
+                50: "#F9FAFB",
+                100: "#F3F4F6",
+                200: "#E5E7EB",
+                300: "#D1D5DB",
+                400: "#9CA3AF",
+                500: "#6B7280",
+                600: "#4B5563",
+                700: "#374151",
+                800: "#1F2937",
+                900: "#111827",
+              },
+            },
+            fontFamily: {
+              heading: ["Space Grotesk", "sans-serif"],
+              body: ["Inter", "sans-serif"],
+            },
+            animation: {
+              "fade-in": "fadeIn 1s ease-in-out",
+              float: "float 6s ease-in-out infinite",
+            },
+            keyframes: {
+              fadeIn: {
+                "0%": { opacity: "0" },
+                "100%": { opacity: "1" },
+              },
+              float: {
+                "0%, 100%": { transform: "translateY(0)" },
+                "50%": { transform: "translateY(-10px)" },
+              },
+            },
+          },
+        },
+      };
+    </script>
+    <style type="text/css">
+      .glass-card {
+        background: rgba(255, 255, 255, 0.08);
+        backdrop-filter: blur(10px);
+        -webkit-backdrop-filter: blur(10px);
+        border: 1px solid rgba(255, 255, 255, 0.1);
+      }
+      .gradient-text {
+        background: linear-gradient(90deg, #00b4d8 0%, #5c6bc0 100%);
+        -webkit-background-clip: text;
+        background-clip: text;
+        color: transparent;
+      }
+    </style>
+  </head>
+  <body class="font-body bg-gray-50 text-gray-800">
+    <!-- Navigation -->
+    <nav class="bg-white border-b border-gray-200 fixed w-full z-20">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex justify-between h-16">
+          <div class="flex items-center">
+            <a href="#" class="flex items-center">
+              <span class="text-primary text-2xl font-heading font-bold"
+                >Nexus<span class="gradient-text">AI</span></span
+              >
+            </a>
+          </div>
+          <div class="hidden md:flex items-center space-x-8">
+            <a
+              href="#home"
+              class="text-primary hover:text-secondary font-medium transition"
+              >Home</a
+            >
+            <a
+              href="#services"
+              class="text-primary hover:text-secondary font-medium transition"
+              >Services</a
+            >
+            <a
+              href="#about"
+              class="text-primary hover:text-secondary font-medium transition"
+              >About</a
+            >
+            <a
+              href="#blog"
+              class="text-primary hover:text-secondary font-medium transition"
+              >Journal</a
+            >
+            <a
+              href="#contact"
+              class="bg-primary text-white px-4 py-2 rounded-md hover:bg-opacity-90 transition font-medium"
+              >Join Waitlist</a
+            >
+          </div>
+          <div class="md:hidden flex items-center">
+            <button id="menu-toggle" class="text-primary focus:outline-none">
+              <svg
+                class="w-6 h-6"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M4 6h16M4 12h16m-7 6h7"
+                ></path>
+              </svg>
+            </button>
+          </div>
+        </div>
+      </div>
+      <!-- Mobile menu -->
+      <div
+        id="mobile-menu"
+        class="hidden md:hidden bg-white border-t border-gray-200"
+      >
+        <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
+          <a
+            href="#home"
+            class="block px-3 py-2 rounded-md text-base font-medium text-primary hover:bg-gray-100"
+            >Home</a
+          >
+          <a
+            href="#services"
+            class="block px-3 py-2 rounded-md text-base font-medium text-primary hover:bg-gray-100"
+            >Services</a
+          >
+          <a
+            href="#about"
+            class="block px-3 py-2 rounded-md text-base font-medium text-primary hover:bg-gray-100"
+            >About</a
+          >
+          <a
+            href="#blog"
+            class="block px-3 py-2 rounded-md text-base font-medium text-primary hover:bg-gray-100"
+            >Journal</a
+          >
+          <a
+            href="#contact"
+            class="block px-3 py-2 rounded-md text-base font-medium bg-primary text-white hover:bg-opacity-90"
+            >Join Waitlist</a
+          >
+        </div>
+      </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section
+      id="home"
+      class="pt-24 pb-16 md:pt-32 md:pb-24 bg-gradient-to-b from-white to-gray-100"
+    >
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="grid md:grid-cols-2 gap-12 items-center">
+          <div class="animate-fade-in">
+            <h1
+              class="text-4xl md:text-5xl lg:text-6xl font-heading font-bold text-primary mb-6 leading-tight"
+            >
+              Transform Your Business with
+              <span class="gradient-text">AI Consulting</span>
+            </h1>
+            <p class="text-lg text-gray-600 mb-8">
+              We help forward-thinking companies leverage artificial
+              intelligence to optimize operations, reduce costs, and
+              future-proof their organizations.
+            </p>
+            <div class="flex flex-col sm:flex-row gap-4">
+              <a
+                href="#contact"
+                class="bg-primary hover:bg-opacity-90 text-white font-medium py-3 px-6 rounded-md transition shadow-md"
+                >Request Early Access</a
+              >
+              <a
+                href="#services"
+                class="border border-primary text-primary hover:bg-gray-50 font-medium py-3 px-6 rounded-md transition"
+                >Explore Services</a
+              >
+            </div>
+          </div>
+          <div class="animate-float hidden md:block">
+            <div class="glass-card p-6 rounded-2xl shadow-xl">
+              <img
+                src="https://images.unsplash.com/photo-1677442135136-760c813a743e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1587&q=80"
+                alt="AI Consulting"
+                class="rounded-lg shadow-md"
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Stats Section -->
+    <section class="py-12 bg-primary text-white">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
+          <div class="p-4">
+            <p class="text-3xl md:text-4xl font-bold mb-2">100+</p>
+            <p class="text-gray-200">Businesses Analyzed</p>
+          </div>
+          <div class="p-4">
+            <p class="text-3xl md:text-4xl font-bold mb-2">40%</p>
+            <p class="text-gray-200">Average Cost Reduction</p>
+          </div>
+          <div class="p-4">
+            <p class="text-3xl md:text-4xl font-bold mb-2">3x</p>
+            <p class="text-gray-200">Operational Efficiency</p>
+          </div>
+          <div class="p-4">
+            <p class="text-3xl md:text-4xl font-bold mb-2">24/7</p>
+            <p class="text-gray-200">AI Monitoring</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="py-16 bg-white">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center mb-16">
+          <span class="text-secondary font-medium">PILOT PROGRAM</span>
+          <h2
+            class="text-3xl md:text-4xl font-heading font-bold text-primary mt-2 mb-4"
+          >
+            Our AI-Powered Services
+          </h2>
+          <p class="max-w-2xl mx-auto text-gray-600">
+            Currently in testing phase, these innovative services are helping
+            select clients prepare for the AI revolution.
+          </p>
+        </div>
+
+        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <!-- Service 1 -->
+          <div
+            class="bg-gray-50 rounded-xl p-6 border border-gray-200 hover:shadow-lg transition"
+          >
+            <div
+              class="w-12 h-12 bg-primary bg-opacity-10 rounded-lg flex items-center justify-center mb-4"
+            >
+              <svg
+                class="w-6 h-6 text-primary"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M9 3v2m6-2v2M9 19v2m6-2v2M5 9H3m2 6H3m18-6h-2m2 6h-2M7 19h10a2 2 0 002-2V7a2 2 0 00-2-2H7a2 2 0 00-2 2v10a2 2 0 002 2zM9 9h6v6H9V9z"
+                ></path>
+              </svg>
+            </div>
+            <h3 class="text-xl font-heading font-semibold text-primary mb-3">
+              AI Readiness Audit
+            </h3>
+            <p class="text-gray-600 mb-4">
+              Comprehensive assessment of your organization's AI maturity with
+              actionable roadmap for implementation.
+            </p>
+            <span
+              class="inline-block bg-primary bg-opacity-10 text-primary text-sm font-medium px-3 py-1 rounded-full"
+              >Pilot Phase</span
+            >
+          </div>
+
+          <!-- Service 2 -->
+          <div
+            class="bg-gray-50 rounded-xl p-6 border border-gray-200 hover:shadow-lg transition"
+          >
+            <div
+              class="w-12 h-12 bg-primary bg-opacity-10 rounded-lg flex items-center justify-center mb-4"
+            >
+              <svg
+                class="w-6 h-6 text-primary"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z"
+                ></path>
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"
+                ></path>
+              </svg>
+            </div>
+            <h3 class="text-xl font-heading font-semibold text-primary mb-3">
+              Automation Strategy
+            </h3>
+            <p class="text-gray-600 mb-4">
+              Identify high-impact automation opportunities across your business
+              processes with our AI-driven analysis.
+            </p>
+            <span
+              class="inline-block bg-primary bg-opacity-10 text-primary text-sm font-medium px-3 py-1 rounded-full"
+              >Pilot Phase</span
+            >
+          </div>
+
+          <!-- Service 3 -->
+          <div
+            class="bg-gray-50 rounded-xl p-6 border border-gray-200 hover:shadow-lg transition"
+          >
+            <div
+              class="w-12 h-12 bg-primary bg-opacity-10 rounded-lg flex items-center justify-center mb-4"
+            >
+              <svg
+                class="w-6 h-6 text-primary"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M13 10V3L4 14h7v7l9-11h-7z"
+                ></path>
+              </svg>
+            </div>
+            <h3 class="text-xl font-heading font-semibold text-primary mb-3">
+              Digital Transformation
+            </h3>
+            <p class="text-gray-600 mb-4">
+              End-to-end guidance for transitioning your business to AI-enhanced
+              digital operations and customer experiences.
+            </p>
+            <span
+              class="inline-block bg-primary bg-opacity-10 text-primary text-sm font-medium px-3 py-1 rounded-full"
+              >Pilot Phase</span
+            >
+          </div>
+        </div>
+
+        <div class="text-center mt-12">
+          <a
+            href="#contact"
+            class="inline-flex items-center text-primary font-medium hover:text-secondary"
+          >
+            Join our pilot program
+            <svg
+              class="w-4 h-4 ml-2"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M9 5l7 7-7 7"
+              ></path>
+            </svg>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-16 bg-gray-50">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="grid md:grid-cols-2 gap-12 items-center">
+          <div>
+            <img
+              src="https://images.unsplash.com/photo-1573164713988-8665fc963095?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1587&q=80"
+              alt="About NexusAI"
+              class="rounded-xl shadow-lg"
+            />
+          </div>
+          <div>
+            <span class="text-secondary font-medium">OUR MISSION</span>
+            <h2
+              class="text-3xl md:text-4xl font-heading font-bold text-primary mt-2 mb-6"
+            >
+              Redefining Business Consulting for the AI Era
+            </h2>
+            <p class="text-gray-600 mb-4">
+              NexusAI Consulting was founded on the belief that artificial
+              intelligence will transform every aspect of business operations.
+              We're here to guide organizations through this transition with
+              expertise, transparency, and measurable results.
+            </p>
+            <p class="text-gray-600 mb-6">
+              Unlike traditional consulting firms, we combine deep business
+              strategy with cutting-edge AI implementation, delivering solutions
+              that are both visionary and immediately actionable.
+            </p>
+
+            <div class="grid grid-cols-2 gap-4">
+              <div class="flex items-start">
+                <svg
+                  class="w-5 h-5 text-primary mt-1 mr-2"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M5 13l4 4L19 7"
+                  ></path>
+                </svg>
+                <span class="text-gray-700">Data-Driven Insights</span>
+              </div>
+              <div class="flex items-start">
+                <svg
+                  class="w-5 h-5 text-primary mt-1 mr-2"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M5 13l4 4L19 7"
+                  ></path>
+                </svg>
+                <span class="text-gray-700">Future-Focused</span>
+              </div>
+              <div class="flex items-start">
+                <svg
+                  class="w-5 h-5 text-primary mt-1 mr-2"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M5 13l4 4L19 7"
+                  ></path>
+                </svg>
+                <span class="text-gray-700">Ethical AI Practices</span>
+              </div>
+              <div class="flex items-start">
+                <svg
+                  class="w-5 h-5 text-primary mt-1 mr-2"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M5 13l4 4L19 7"
+                  ></path>
+                </svg>
+                <span class="text-gray-700">Measurable Impact</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Blog/Journal Section -->
+    <section id="blog" class="py-16 bg-white">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center mb-12">
+          <span class="text-secondary font-medium">INSIGHTS</span>
+          <h2
+            class="text-3xl md:text-4xl font-heading font-bold text-primary mt-2 mb-4"
+          >
+            From Our Journal
+          </h2>
+          <p class="max-w-2xl mx-auto text-gray-600">
+            Thoughts on AI adoption, digital transformation, and our journey
+            building NexusAI Consulting.
+          </p>
+        </div>
+
+        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <!-- Article 1 -->
+          <div
+            class="bg-gray-50 rounded-xl overflow-hidden border border-gray-200 hover:shadow-lg transition"
+          >
+            <img
+              src="https://images.unsplash.com/photo-1677442135136-760c813a743e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1587&q=80"
+              alt="AI Trends"
+              class="w-full h-48 object-cover"
+            />
+            <div class="p-6">
+              <span class="text-sm text-gray-500">June 15, 2023</span>
+              <h3
+                class="text-xl font-heading font-semibold text-primary mt-2 mb-3"
+              >
+                The 5 AI Trends Every Executive Should Watch
+              </h3>
+              <p class="text-gray-600 mb-4">
+                Exploring the emerging AI technologies that will impact business
+                operations in the next 12-18 months.
+              </p>
+              <a
+                href="#"
+                class="text-primary font-medium hover:text-secondary inline-flex items-center"
+              >
+                Read more
+                <svg
+                  class="w-4 h-4 ml-1"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M9 5l7 7-7 7"
+                  ></path>
+                </svg>
+              </a>
+            </div>
+          </div>
+
+          <!-- Article 2 -->
+          <div
+            class="bg-gray-50 rounded-xl overflow-hidden border border-gray-200 hover:shadow-lg transition"
+          >
+            <img
+              src="https://images.unsplash.com/photo-1620712943543-bcc4688e7485?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1587&q=80"
+              alt="AI Implementation"
+              class="w-full h-48 object-cover"
+            />
+            <div class="p-6">
+              <span class="text-sm text-gray-500">May 28, 2023</span>
+              <h3
+                class="text-xl font-heading font-semibold text-primary mt-2 mb-3"
+              >
+                Avoiding Common AI Implementation Pitfalls
+              </h3>
+              <p class="text-gray-600 mb-4">
+                Lessons learned from our pilot program about what not to do when
+                adopting AI solutions.
+              </p>
+              <a
+                href="#"
+                class="text-primary font-medium hover:text-secondary inline-flex items-center"
+              >
+                Read more
+                <svg
+                  class="w-4 h-4 ml-1"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M9 5l7 7-7 7"
+                  ></path>
+                </svg>
+              </a>
+            </div>
+          </div>
+
+          <!-- Article 3 -->
+          <div
+            class="bg-gray-50 rounded-xl overflow-hidden border border-gray-200 hover:shadow-lg transition"
+          >
+            <img
+              src="https://images.unsplash.com/photo-1620712943543-bcc4688e7485?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1587&q=80"
+              alt="Building NexusAI"
+              class="w-full h-48 object-cover"
+            />
+            <div class="p-6">
+              <span class="text-sm text-gray-500">April 10, 2023</span>
+              <h3
+                class="text-xl font-heading font-semibold text-primary mt-2 mb-3"
+              >
+                Why We Started NexusAI Consulting
+              </h3>
+              <p class="text-gray-600 mb-4">
+                The gaps we saw in traditional business consulting that inspired
+                us to build an AI-first approach.
+              </p>
+              <a
+                href="#"
+                class="text-primary font-medium hover:text-secondary inline-flex items-center"
+              >
+                Read more
+                <svg
+                  class="w-4 h-4 ml-1"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M9 5l7 7-7 7"
+                  ></path>
+                </svg>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <div class="text-center mt-12">
+          <a
+            href="#"
+            class="inline-flex items-center text-primary font-medium hover:text-secondary"
+          >
+            View all articles
+            <svg
+              class="w-4 h-4 ml-2"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M9 5l7 7-7 7"
+              ></path>
+            </svg>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="py-16 bg-primary text-white">
+      <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+        <h2 class="text-3xl md:text-4xl font-heading font-bold mb-6">
+          Ready to Future-Proof Your Business?
+        </h2>
+        <p class="text-xl text-gray-200 mb-8">
+          Join our exclusive pilot program and be among the first to experience
+          AI-powered business transformation.
+        </p>
+        <a
+          href="#contact"
+          class="inline-block bg-white text-primary font-medium py-3 px-8 rounded-md hover:bg-opacity-90 transition shadow-lg"
+          >Request Early Access</a
+        >
+      </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-16 bg-gray-50">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="grid md:grid-cols-2 gap-12">
+          <div>
+            <span class="text-secondary font-medium">GET IN TOUCH</span>
+            <h2
+              class="text-3xl md:text-4xl font-heading font-bold text-primary mt-2 mb-6"
+            >
+              Join Our Waitlist
+            </h2>
+            <p class="text-gray-600 mb-8">
+              Complete the form to request early access to our services, join
+              the waitlist, or schedule a consultation.
+            </p>
+
+            <div class="space-y-6">
+              <div class="flex items-start">
+                <div class="flex-shrink-0">
+                  <svg
+                    class="w-6 h-6 text-primary"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                      d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"
+                    ></path>
+                  </svg>
+                </div>
+                <div class="ml-3">
+                  <p class="text-gray-700">contact@nexusai.com</p>
+                </div>
+              </div>
+
+              <div class="flex items-start">
+                <div class="flex-shrink-0">
+                  <svg
+                    class="w-6 h-6 text-primary"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                      d="M17 8h2a2 2 0 012 2v6a2 2 0 01-2 2h-2v4l-4-4H9a1.994 1.994 0 01-1.414-.586m0 0L11 14h4a2 2 0 002-2V6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2v4l.586-.586z"
+                    ></path>
+                  </svg>
+                </div>
+                <div class="ml-3">
+                  <p class="text-gray-700">Join our community on Discord</p>
+                </div>
+              </div>
+
+              <div class="flex items-start">
+                <div class="flex-shrink-0">
+                  <svg
+                    class="w-6 h-6 text-primary"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                      d="M12 18h.01M8 21h8a2 2 0 002-2V5a2 2 0 00-2-2H8a2 2 0 00-2 2v14a2 2 0 002 2z"
+                    ></path>
+                  </svg>
+                </div>
+                <div class="ml-3">
+                  <p class="text-gray-700">Follow us on LinkedIn for updates</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div>
+            <form
+              class="bg-white p-6 rounded-xl shadow-md border border-gray-200"
+            >
+              <div class="mb-4">
+                <label for="name" class="block text-gray-700 font-medium mb-2"
+                  >Full Name</label
+                >
+                <input
+                  type="text"
+                  id="name"
+                  class="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent"
+                />
+              </div>
+              <div class="mb-4">
+                <label for="email" class="block text-gray-700 font-medium mb-2"
+                  >Email Address</label
+                >
+                <input
+                  type="email"
+                  id="email"
+                  class="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent"
+                />
+              </div>
+              <div class="mb-4">
+                <label
+                  for="company"
+                  class="block text-gray-700 font-medium mb-2"
+                  >Company (Optional)</label
+                >
+                <input
+                  type="text"
+                  id="company"
+                  class="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent"
+                />
+              </div>
+              <div class="mb-6">
+                <label
+                  for="interest"
+                  class="block text-gray-700 font-medium mb-2"
+                  >I'm interested in</label
+                >
+                <select
+                  id="interest"
+                  class="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent"
+                >
+                  <option>Early Access to Services</option>
+                  <option>Free Consultation</option>
+                  <option>Join Waitlist</option>
+                  <option>Other Inquiry</option>
+                </select>
+              </div>
+              <button
+                type="submit"
+                class="w-full bg-primary text-white font-medium py-3 px-4 rounded-md hover:bg-opacity-90 transition"
+              >
+                Submit Request
+              </button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-12">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="grid md:grid-cols-4 gap-8">
+          <div>
+            <a href="#" class="flex items-center mb-6">
+              <span class="text-white text-2xl font-heading font-bold"
+                >Nexus<span class="gradient-text">AI</span></span
+              >
+            </a>
+            <p class="text-gray-400">
+              AI-powered business consulting to future-proof your organization.
+            </p>
+          </div>
+
+          <div>
+            <h3 class="text-lg font-medium mb-4">Company</h3>
+            <ul class="space-y-2">
+              <li>
+                <a
+                  href="#about"
+                  class="text-gray-400 hover:text-white transition"
+                  >About Us</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#services"
+                  class="text-gray-400 hover:text-white transition"
+                  >Services</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#blog"
+                  class="text-gray-400 hover:text-white transition"
+                  >Journal</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#contact"
+                  class="text-gray-400 hover:text-white transition"
+                  >Contact</a
+                >
+              </li>
+            </ul>
+          </div>
+
+          <div>
+            <h3 class="text-lg font-medium mb-4">Legal</h3>
+            <ul class="space-y-2">
+              <li>
+                <a href="#" class="text-gray-400 hover:text-white transition"
+                  >Privacy Policy</a
+                >
+              </li>
+              <li>
+                <a href="#" class="text-gray-400 hover:text-white transition"
+                  >Terms of Service</a
+                >
+              </li>
+              <li>
+                <a href="#" class="text-gray-400 hover:text-white transition"
+                  >Cookie Policy</a
+                >
+              </li>
+            </ul>
+          </div>
+
+          <div>
+            <h3 class="text-lg font-medium mb-4">Connect</h3>
+            <div class="flex space-x-4">
+              <a href="#" class="text-gray-400 hover:text-white transition">
+                <svg
+                  class="w-6 h-6"
+                  fill="currentColor"
+                  viewBox="0 0 24 24"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M22.675 0H1.325C.593 0 0 .593 0 1.325v21.351C0 23.407.593 24 1.325 24H12.82v-9.294H9.692v-3.622h3.128V8.413c0-3.1 1.893-4.788 4.659-4.788 1.325 0 2.463.099 2.795.143v3.24l-1.918.001c-1.504 0-1.795.715-1.795 1.763v2.313h3.587l-.467 3.622h-3.12V24h6.116c.73 0 1.323-.593 1.323-1.325V1.325C24 .593 23.407 0 22.675 0z"
+                  ></path>
+                </svg>
+              </a>
+              <a href="#" class="text-gray-400 hover:text-white transition">
+                <svg
+                  class="w-6 h-6"
+                  fill="currentColor"
+                  viewBox="0 0 24 24"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M23.953 4.57a10 10 0 01-2.825.775 4.958 4.958 0 002.163-2.723 10.054 10.054 0 01-3.127 1.184 4.92 4.92 0 00-8.384 4.482C7.69 8.095 4.067 6.13 1.64 3.162a4.822 4.822 0 00-.666 2.475c0 1.71.87 3.213 2.188 4.096a4.904 4.904 0 01-2.228-.616v.06a4.923 4.923 0 003.946 4.827 4.996 4.996 0 01-2.212.085 4.936 4.936 0 004.604 3.417 9.867 9.867 0 01-6.102 2.105c-.39 0-.779-.023-1.17-.067a13.995 13.995 0 007.557 2.209c9.053 0 13.998-7.496 13.998-13.985 0-.21 0-.42-.015-.63A9.935 9.935 0 0024 4.59z"
+                  ></path>
+                </svg>
+              </a>
+              <a href="#" class="text-gray-400 hover:text-white transition">
+                <svg
+                  class="w-6 h-6"
+                  fill="currentColor"
+                  viewBox="0 0 24 24"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"
+                  ></path>
+                </svg>
+              </a>
+            </div>
+            <div class="mt-4">
+              <p class="text-gray-400">Subscribe to our newsletter</p>
+              <div class="mt-2 flex">
+                <input
+                  type="email"
+                  placeholder="Your email"
+                  class="px-4 py-2 rounded-l-md focus:outline-none text-gray-900 w-full"
+                />
+                <button
+                  class="bg-primary text-white px-4 py-2 rounded-r-md hover:bg-opacity-90 transition"
+                >
+                  Subscribe
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div
+          class="border-t border-gray-800 mt-12 pt-8 text-center text-gray-400"
+        >
+          <p>&copy; 2023 NexusAI Consulting. All rights reserved.</p>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Flowbite JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.3.0/flowbite.min.js"></script>
+    <!-- Custom JS -->
+    <script>
+      // Mobile menu toggle
+      document
+        .getElementById("menu-toggle")
+        .addEventListener("click", function () {
+          document.getElementById("mobile-menu").classList.toggle("hidden");
+        });
+
+      // Smooth scrolling for anchor links
+      document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
+        anchor.addEventListener("click", function (e) {
+          e.preventDefault();
+
+          document.querySelector(this.getAttribute("href")).scrollIntoView({
+            behavior: "smooth",
+          });
+
+          // Close mobile menu if open
+          document.getElementById("mobile-menu").classList.add("hidden");
+        });
+      });
+
+      // Animation on scroll
+      const observer = new IntersectionObserver(
+        (entries) => {
+          entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+              entry.target.classList.add("animate-fade-in");
+            }
+          });
+        },
+        {
+          threshold: 0.1,
+        }
+      );
+
+      document.querySelectorAll("section").forEach((section) => {
+        observer.observe(section);
+      });
+    </script>
+  </body>
+</html>
