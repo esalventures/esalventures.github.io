@@ -91,6 +91,16 @@
       .logo-bar-side {
         height: 20px;
       }
+      .hero-section {
+        background-image: linear-gradient(
+            rgba(0, 43, 91, 0.8),
+            rgba(0, 43, 91, 0.8)
+          ),
+          url("https://images.unsplash.com/photo-1620712943543-bcc4688e7485?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1587&q=80");
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+      }
     </style>
   </head>
   <body class="font-body bg-gray-50 text-gray-800">
@@ -192,22 +202,21 @@
       </div>
     </nav>
 
-    <!-- Hero Section -->
+    <!-- Hero Section with Background Image -->
     <section
       id="home"
-      class="pt-24 pb-16 md:pt-32 md:pb-24 bg-cover bg-center"
-      style="background-image: url('https://images.unsplash.com/photo-1551836022-fca9330890ca?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');"
+      class="hero-section pt-24 pb-16 md:pt-32 md:pb-24 text-white"
     >
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="grid md:grid-cols-2 gap-12 items-center">
           <div class="animate-fade-in">
             <h1
-              class="text-4xl md:text-5xl lg:text-6xl font-heading font-bold text-primary mb-6 leading-tight"
+              class="text-4xl md:text-5xl lg:text-6xl font-heading font-bold mb-6 leading-tight"
             >
               AI-Driven Business
               <span class="gradient-text">Transformation</span>
             </h1>
-            <p class="text-lg text-gray-600 mb-8">
+            <p class="text-lg text-gray-200 mb-8">
               Esal Ventures helps enterprises leverage artificial intelligence
               to optimize operations, reduce costs, and gain competitive
               advantage in the digital age.
@@ -215,12 +224,12 @@
             <div class="flex flex-col sm:flex-row gap-4">
               <a
                 href="#contact"
-                class="bg-primary hover:bg-opacity-90 text-white font-medium py-3 px-6 rounded-md transition shadow-md"
+                class="bg-white text-primary font-medium py-3 px-6 rounded-md hover:bg-opacity-90 transition shadow-md"
                 >Contact Our Team</a
               >
               <a
                 href="#services"
-                class="border border-primary text-primary hover:bg-gray-50 font-medium py-3 px-6 rounded-md transition"
+                class="border border-white text-white hover:bg-white hover:bg-opacity-10 font-medium py-3 px-6 rounded-md transition"
                 >Explore Services</a
               >
             </div>
@@ -906,45 +915,41 @@
       </div>
     </section>
 
-    <!-- Newsletter Section -->
-    <section class="py-12 bg-gray-900">
+    <!-- Newsletter Section with Footer Background -->
+    <section class="py-12 bg-gray-900 text-white">
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div class="bg-white rounded-xl shadow-md p-8 md:p-12">
-          <div class="grid md:grid-cols-2 gap-8 items-center">
-            <div>
-              <h3 class="text-2xl font-heading font-bold text-primary mb-2">
-                Stay Updated
-              </h3>
-              <p class="text-gray-600">
-                Subscribe to our newsletter for the latest insights on AI and
-                digital transformation.
-              </p>
-            </div>
-            <div>
-              <form class="flex">
-                <input
-                  type="email"
-                  placeholder="Your email address"
-                  class="flex-grow px-4 py-3 border border-gray-300 rounded-l-md focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent"
-                />
-                <button
-                  type="submit"
-                  class="bg-primary text-white font-medium px-6 py-3 rounded-r-md hover:bg-opacity-90 transition"
-                >
-                  Subscribe
-                </button>
-              </form>
-              <p class="text-sm text-gray-500 mt-2">
-                We respect your privacy. Unsubscribe at any time.
-              </p>
-            </div>
+        <div class="grid md:grid-cols-2 gap-8 items-center">
+          <div>
+            <h3 class="text-2xl font-heading font-bold mb-2">Stay Updated</h3>
+            <p class="text-gray-300">
+              Subscribe to our newsletter for the latest insights on AI and
+              digital transformation.
+            </p>
+          </div>
+          <div>
+            <form class="flex">
+              <input
+                type="email"
+                placeholder="Your email address"
+                class="flex-grow px-4 py-3 rounded-l-md focus:outline-none text-gray-900"
+              />
+              <button
+                type="submit"
+                class="bg-primary text-white font-medium px-6 py-3 rounded-r-md hover:bg-opacity-90 transition"
+              >
+                Subscribe
+              </button>
+            </form>
+            <p class="text-sm text-gray-400 mt-2">
+              We respect your privacy. Unsubscribe at any time.
+            </p>
           </div>
         </div>
       </div>
     </section>
 
     <!-- Footer -->
-    <footer class="bg-gray-900 text-white py-12">
+    <footer class="bg-gray-900 text-white py-12 border-t border-gray-800">
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="grid md:grid-cols-4 gap-8">
           <div>
